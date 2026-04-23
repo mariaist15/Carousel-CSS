@@ -6,7 +6,7 @@
   font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
 }
 
- /* Card title styling */
+/* Card title styling */
 .dc .dc-card h3{
   font-size: 1.5rem !important;
   font-weight: 500 !important;
@@ -16,9 +16,9 @@
   color: #ffffff;
 }
 
-/* Base font */ 
-.dc, .dc *{ 
-  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+/* Base font */
+.dc, .dc *{
+  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 /* ===== Scoped vars ===== */
@@ -42,7 +42,7 @@
   border-radius:20px; overflow:hidden; background:#0f0f10; margin:0 !important;
   box-shadow:0 6px 18px rgba(0,0,0,.18);
 }
-@media (min-width:900px){ .dc .dc-card{ width:392px; height:578px; } } /* desktop -20% width */
+@media (min-width:900px){ .dc .dc-card{ width:392px; height:578px; } }
 
 .dc .dc-card a{ position:relative; display:block; height:100%; color:inherit; text-decoration:none; }
 .dc .dc-card img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
@@ -117,7 +117,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   .dc-modal-backdrop{ background-color: rgba(0,0,0,.35) !important; }
 }
 
-/* Square bottom corners + touches viewport bottom */
 .dc-modal-panel{
   position: relative;
   z-index: 2147483647;
@@ -169,17 +168,10 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 .dc-scrolltop{ position: absolute; right: 12px; bottom: 12px; opacity: 0; pointer-events: none; transition: opacity .18s ease; }
 .dc-scrolltop.is-visible{ opacity: 1; pointer-events: auto; }
 
-
-
-/* VIEWPORT DISTANCE: DISTANCE BETWEEN VIEWPORT ADN DC MODAL/TEXT */
-
 /* Modal content */
 .dc-modal-body{
   --padTop: 100px;
-
-  /* Mobile-first: VIEWPORT EDGES DISTANCE TO DC MODAL/TEXT */
   padding: var(--padTop) 10px 200px;
-
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
@@ -187,7 +179,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   overscroll-behavior: contain;
 }
 
-/* Desktop: wider gutters */
 @media (min-width: 900px){
   .dc-modal-body{
     padding-left: 96px;
@@ -195,7 +186,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   }
 }
 
-/* Headings & content */
 .dc-modal-body h2,
 .dc-modal-body h3{
   margin: .5rem 0 1rem;
@@ -226,17 +216,10 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 .dc-modal-textbox{ background:#191919; padding:32px 36px; border-radius:10px; margin:1rem 0 2rem; }
 .dc-modal-textbox p:last-child{ margin-bottom:0; }
 
-/* GRAY CARD space and TEXT INSIDE – mobile */
 @media (max-width: 768px){
-  .dc-modal-textbox{
-    padding: 22px 16px 22px 16px;
-  }
-
-  .dc-apple .dc-modal-textbox{
-    padding: 22px 16px 22px 16px;
-  }
+  .dc-modal-textbox{ padding: 22px 16px 22px 16px; }
+  .dc-apple .dc-modal-textbox{ padding: 22px 16px 22px 16px; }
 }
-
 
 /* CTA */
 .dc-cta{
@@ -246,7 +229,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 .dc-cta:hover{ background:rgba(255,255,255,.20); transform:translateY(-1px); }
 
-/* --- NEW: disable card-link taps on touch so they do nothing --- */
 @media (hover: none) and (pointer: coarse){
   .dc .dc-card a { pointer-events: none; }
 }
@@ -256,7 +238,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   transform: none !important;
   visibility: visible !important;
 }
-
 
 .dc-apple {
   font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -271,14 +252,12 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
    WRAP (viewport → content)
    =============================== */
 
-/* DC MODALS Desktop  */
 .dc-apple .wrap{
   max-width: 920px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* DC MODALS Mobile  */
 @media (max-width: 768px){
   .dc-apple .wrap{
     padding-left: 1vw !important;
@@ -326,16 +305,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin:0 0 24px 0;
 }
 
-/* Override GLOBAL modal heading spacing ONLY inside dc-apple */
 .dc-modal-body .dc-apple h2{
-  transform: none !important;          /* kills the upward shift */
-  margin: 0 0 14px 0 !important;        /* tight bottom spacing */
+  transform: none !important;
+  margin: 0 0 14px 0 !important;
 }
 
 .dc-modal-body .dc-apple p.support{
-  margin: 0 0 30px 0 !important;       /* keep your desired spacing */
+  margin: 0 0 30px 0 !important;
 }
-
 
 /* ===============================
    LOGOS
@@ -357,15 +334,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 /* ===============================
-   DEFAULT GRAY CARDS (kept normal)
+   DEFAULT GRAY CARDS
    =============================== */
 
-/* This stays “standard” so it doesn’t affect other cards */
 .dc-apple .dc-modal-textbox{
   background:#191919;
   border-radius:10px;
-  padding:14px 14px;      /* inside */
-  margin:0 0 32px 0;      /* between cards */
+  padding:14px 14px;
+  margin:0 0 32px 0;
 }
 
 @media (max-width: 768px){
@@ -377,54 +353,27 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 .dc-apple .dc-modal-textbox p:last-child{ margin-bottom:0; }
-/* ===============================
-   STEP CARDS ONLY (1–5)
-   Same glossy black effect as package-checklist
-   NO colorful borders
-   Use: class="dc-modal-textbox step-card"
-   =============================== */
 
 .dc-apple .dc-modal-textbox.step-card{
   position: relative;
-
-  /* Glossy black Apple-style gradient (same as package) */
   background-image:
-    linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.06),
-      rgba(255,255,255,0.00)
-    ),
-    linear-gradient(
-      135deg,
-      #0b0b0d 0%,
-      #141416 50%,
-      #1c1c1f 100%
-    );
-
+    linear-gradient(to bottom, rgba(255,255,255,0.06), rgba(255,255,255,0.00)),
+    linear-gradient(135deg, #0b0b0d 0%, #141416 50%, #1c1c1f 100%);
   border-radius: 16px;
   padding: 26px 26px 24px;
   margin: 0 0 32px 0;
-
-  /* subtle neutral border only */
   border: 1px solid rgba(255,255,255,0.10);
   background-clip: padding-box;
-
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.08),
     0 18px 40px rgba(0,0,0,0.45);
 }
 
-/* Ensure text contrast is correct */
-.dc-apple .dc-modal-textbox.step-card .item-title{
-  color: #ffffff;
-}
-
-.dc-apple .dc-modal-textbox.step-card .item-body{
-  color: #BAB8B8;
-}
+.dc-apple .dc-modal-textbox.step-card .item-title{ color: #ffffff; }
+.dc-apple .dc-modal-textbox.step-card .item-body{ color: #BAB8B8; }
 
 /* ===============================
-   ITEM TITLE ROW
+   ITEM TITLE
    =============================== */
 
 .dc-apple .item-title{
@@ -440,7 +389,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin:0 0 12px 0;
 }
 
-/* Number badge — colorful gradient border, rounded square */
 .dc-apple .item-number{
   position:relative;
   width:44px;
@@ -448,8 +396,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  border-radius:20px;            /* rounded square */
-  background: rgba(0,0,0,0.90);  /* inner fill */
+  border-radius:20px;
+  background: rgba(0,0,0,0.90);
   color:#ffffff;
   font-size:1.2rem;
   font-weight:600;
@@ -463,24 +411,15 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   inset:0;
   padding:1.5px;
   border-radius:inherit;
-
-  background: linear-gradient(
-    135deg,
-    #6ee7f9,
-    #a78bfa,
-    #fbc2eb
-  );
-
+  background: linear-gradient(135deg, #6ee7f9, #a78bfa, #fbc2eb);
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite:xor;
   mask-composite:exclude;
-
   pointer-events:none;
 }
 
-/* Item body */
 .dc-apple .item-body{
   color:#807E7E;
   font-weight:500;
@@ -492,310 +431,121 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   max-width:none;
 }
 
-
 /* ===============================
-   PACKAGE CHECKLIST (unchanged)
+   PACKAGE CHECKLIST (UPDATED)
    =============================== */
 
 .dc-apple .package-checklist{
-  position:relative;
-
-  background:
-    linear-gradient(
-      110deg,
-      rgba(0,0,0,0.92) 0%,
-      rgba(8,8,10,0.85) 35%,
-      rgba(20,20,24,0.72) 65%,
-      rgba(28,28,31,0.60) 100%
-    );
-
-  backdrop-filter: blur(26px) saturate(170%);
-  -webkit-backdrop-filter: blur(26px) saturate(170%);
-
-  border-radius:16px;
-  padding:26px 26px 24px;
-  margin:20px 0 40px;
-
-  border:1px solid rgba(255,255,255,0.10);
-  background-clip:padding-box;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.12),
-    inset 0 -1px 0 rgba(0,0,0,0.65),
-    0 22px 55px rgba(0,0,0,0.55);
+  position: relative;
+  background: #000000;
+  border: 1px solid #212121;
+  border-radius: 15px;
+  padding: 36px 24px 30px;
+  margin: 20px 0 32px;
+  box-shadow: none;
+  overflow: hidden;
 }
 
 .dc-apple .package-checklist::before{
   content:"";
   position:absolute;
   inset:0;
-  padding:1px;
   border-radius:inherit;
-
-  background: linear-gradient(
-    135deg,
-    #6ee7f9,
-    #a78bfa,
-    #fbc2eb
-  );
-
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-
   pointer-events:none;
+  opacity:0;
+  transition: opacity .25s ease;
+  background:
+    radial-gradient(700px 280px at 10% 10%, rgba(110,231,249,0.10), transparent 60%),
+    radial-gradient(620px 260px at 85% 8%, rgba(167,139,250,0.10), transparent 62%),
+    radial-gradient(560px 260px at 90% 88%, rgba(251,194,235,0.08), transparent 60%);
+}
+
+.dc-apple .package-checklist:hover::before{
+  opacity: 1;
 }
 
 .dc-apple .package-checklist::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:inherit;
-  pointer-events:none;
-
-  background:
-    radial-gradient(900px 420px at 12% 18%, rgba(110,231,249,0.11), rgba(0,0,0,0) 60%),
-    radial-gradient(700px 360px at 75% 8%,  rgba(167,139,250,0.11), rgba(0,0,0,0) 62%),
-    radial-gradient(600px 320px at 92% 80%, rgba(251,194,235,0.09), rgba(0,0,0,0) 58%),
-    linear-gradient(120deg, rgba(255,255,255,0.11), rgba(255,255,255,0.05), rgba(255,255,255,0.00));
-
-  opacity:0.75;
-  mix-blend-mode:screen;
+  display: none;
 }
 
-.dc-apple .package-checklist{
-  padding-top: 40px;     /* space INSIDE top */
-  padding-bottom: 40px;  /* space INSIDE bottom */
+.dc-apple .package-checklist .package-category{
+  display: none !important;
+}
+
+.dc-apple .package-checklist .package-title,
+.dc-apple .package-checklist .package-title.is-text-outline{
+  color:#ffffff;
+  background:none;
+  -webkit-text-stroke:0;
+  -webkit-text-fill-color:#ffffff;
+  text-shadow:none;
+  font-weight:600;
+  font-size:clamp(2rem, 3vw, 2.6rem);
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  margin:0 0 18px;
+}
+
+.dc-apple .package-checklist .item-body{
+  color:#8b8b8f;
+  font-size:clamp(1.15rem, 1.35vw, 1.35rem);
+  font-weight:500;
+  line-height:1.28;
+  margin:0 0 18px;
 }
 
 .dc-apple .package-checklist ul{
   list-style:none;
-  padding:0;
   margin:0;
+  padding:18px 0 0;
+  border-top:1px solid #212121;
 }
 
 .dc-apple .package-checklist li{
   display:flex;
-  align-items:center;
-  gap:14px;
-  color:#fff;
-  font-size:0.95rem;
-  line-height:1.45;
-  margin-bottom:12px;
+  align-items:flex-start;
+  gap:12px;
+  color:#f2f2f2;
+  font-size:clamp(1.05rem, 1.2vw, 1.22rem);
+  font-weight:500;
+  line-height:1.35;
+  margin-bottom:10px;
 }
 
 .dc-apple .package-checklist li:last-child{ margin-bottom:0; }
 
-.dc-apple .package-checklist .check{
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  position:relative;
-
-  background:
-    radial-gradient(18px 12px at 30% 30%, rgba(110,231,249,0.28), transparent 70%),
-    radial-gradient(16px 10px at 70% 20%, rgba(167,139,250,0.25), transparent 72%),
-    radial-gradient(18px 12px at 60% 80%, rgba(251,194,235,0.22), transparent 74%),
-    linear-gradient(135deg, #ffffff, #f5f6f8);
-
-  backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-
-  border:0.5px solid rgba(255,255,255,0.7);
-
-  color:#000;
-  font-size:0.8rem;
-  font-weight:700;
-  flex-shrink:0;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.9),
-    0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* ✅ 2× MORE COLORFUL checkmark style */
+.dc-apple .package-checklist .check,
 .dc-apple .dc-modal-textbox.dc-modal-plain .check{
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  position:relative;
-
-  background:
-    radial-gradient(18px 12px at 30% 30%, rgba(110,231,249,0.55), transparent 70%),
-    radial-gradient(16px 10px at 70% 20%, rgba(167,139,250,0.50), transparent 72%),
-    radial-gradient(18px 12px at 60% 80%, rgba(251,194,235,0.45), transparent 74%),
-    linear-gradient(135deg, #ffffff, #f5f6f8);
-
-  backdrop-filter: blur(12px) saturate(200%);
-  -webkit-backdrop-filter: blur(12px) saturate(200%);
-
-  border:0.5px solid rgba(255,255,255,0.8);
-
-  color:#000;
-  font-size:0.8rem;
-  font-weight:700;
-  flex-shrink:0;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    0 6px 14px rgba(0,0,0,0.18);
-}
-
-
-
-
-/* Gradient title inside package */
-.dc-apple .package-checklist .package-title{
+  width:auto;
+  height:auto;
+  min-width:22px;
+  display:inline-block;
+  background:none;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  color:#ffffff;
+  font-size:1.05rem;
   font-weight:600;
-  font-size: clamp(1.55rem, 2.2vw, 2.05rem);
-  line-height:1.16;
-  letter-spacing:-0.02em;
-  margin:0 0 18px 0;
-
-  background: linear-gradient(135deg, #6ee7f9, #a78bfa, #fbc2eb);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
+  line-height:1;
+  flex-shrink:0;
+  transform: translateY(2px);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
 }
-
-.dc-apple .package-title.is-text-outline{
-  font-weight: 400;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
-
-  /* white fill */
-  color: #ffffff;
-
-  /* gradient stroke */
-  background: linear-gradient(
-    135deg,
-    #6ee7f9,
-    #a78bfa,
-    #fbc2eb
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* outline only */
-  -webkit-text-stroke: 1px transparent;
-
-  /* optional subtle glow */
-  text-shadow:
-    0 0 6px rgba(167,139,250,0.25);
-}
-
-/* Keep the same sizing as the gradient title, but make it white fill + gradient stroke */
-.dc-apple .package-checklist .package-title.is-text-outline{
-  font-weight: 450;
-  font-size: clamp(1.55rem, 2.2vw, 2.05rem);
-  line-height: 1.16;
-  letter-spacing: -0.02em;
-  margin: 0 0 18px 0;
-
-  /* white fill */
-  color: #ffffff;
-
-  /* gradient for the stroke */
-  background: linear-gradient(135deg, #6ee7f9, #a78bfa, #fbc2eb);
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* outline uses the gradient (stroke is “transparent” so gradient shows through) */
-  -webkit-text-stroke: 1px transparent;
-
-  /* IMPORTANT: override the gradient-fill style (prevents transparent fill) */
-  -webkit-text-fill-color: #ffffff; /* helps in WebKit browsers */
-}
-
-
-.dc-apple .package-checklist .is-bold{
-  font-weight: 700;
-  font-style: normal;
-}
-
-.dc-apple .package-checklist .item-body{
-  margin-bottom: 14px;
-}
-
-.dc-apple .package-checklist .package-category{
-  color:#000 !important;
-  font-size:0.7rem !important;
-  font-weight:900 !important;
-  letter-spacing:0.12em !important;
-  text-transform:uppercase !important;
-  margin-bottom:13px !important;
-  display:block;
-}
-
-.dc-apple .package-checklist .package-category{
-  position: relative;
-  display: inline-block;
-
-  padding: 3px 8px;
-  margin-bottom: 15px;
-  border-radius: 5px; /* ← requested */
-
-  color: #000;
-  font-size: 0.6rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-
-  /* WHITE AURORA GLASS — ~2× MORE COLOR */
-background:
-  /* intense, small color touches (only in 2–3 spots) */
-  radial-gradient(70px 40px at 18% 35%, rgba(110,231,249,0.55), rgba(255,255,255,0) 70%),
-  radial-gradient(65px 38px at 82% 30%, rgba(167,139,250,0.50), rgba(255,255,255,0) 72%),
-  radial-gradient(75px 42px at 68% 88%, rgba(251,194,235,0.45), rgba(255,255,255,0) 74%),
-
-  /* clean pure white base */
-  linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1));
-  /* clean white glass base */
-  linear-gradient(
-    135deg,
-    rgba(255,255,255,1),
-    rgba(245,246,248,0.96)
-  );
-  
-  backdrop-filter: blur(18px) saturate(220%);
-  -webkit-backdrop-filter: blur(18px) saturate(220%);
-
-  border: 0.5px solid rgba(255,255,255,0.8);
-  background-clip: padding-box;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    0 6px 16px rgba(0,0,0,0.18);
-}
-
 
 /* =====================================
-   PLAIN BLACK PACKAGE (KEEP BORDER)
+   PLAIN BLACK PACKAGE (kept)
    ===================================== */
 
 .dc-apple .package-checklist.package-plain{
-  background: #0f0f11; /* plain black interior */
+  background: #0f0f11;
 }
 
-/* REMOVE ONLY the aurora GLOW layer */
 .dc-apple .package-checklist.package-plain::after{
   display: none;
 }
 
-/* KEEP the colorful gradient border (::before stays untouched) */
-
-
-/* Plain title (no gradient, no outline) */
 .dc-apple .package-checklist.package-plain .package-title{
   color: #ffffff;
   background: none;
@@ -803,9 +553,8 @@ background:
   text-shadow: none;
 }
 
-
 /* =====================================================
-   QUIZ – APPLE STYLE WITH LARGE BACKGROUND NUMBERS
+   QUIZ
    ===================================================== */
 
 .dc-quiz{
@@ -815,7 +564,6 @@ background:
   --muted: rgba(0,0,0,.60);
 }
 
-/* Header */
 .dc-quiz-header{
   text-align:center;
   margin: 8px 0 22px;
@@ -829,7 +577,6 @@ background:
   font-weight:500;
 }
 
-/* Group container */
 .dc-quiz-group{
   border: 1px solid var(--hairline);
   border-radius: 20px;
@@ -837,46 +584,37 @@ background:
   overflow: hidden;
 }
 
-/* Rows */
 .dc-quiz-row{
   position: relative;
-  padding: 10px 20px 45px 20px; /* unchanged */
+  padding: 10px 20px 45px 20px;
   border-top: 1px solid var(--hairline-soft);
   z-index: 0;
 }
-.dc-quiz-row:first-child{
-  border-top: 0;
-}
+.dc-quiz-row:first-child{ border-top: 0; }
 
-/* Number pinned to TOP RIGHT */
 .dc-quiz-row::before{
   content: "";
   position: absolute;
   top: 15px;
   right: 15px;
-
   font-size: 25px;
   font-weight: 600;
   line-height: 1;
-
   color: rgba(255,255,255,1);
   pointer-events: none;
 }
 
-/* Assign numbers */
 .dc-quiz-row:nth-child(1)::before{ content: "1"; }
 .dc-quiz-row:nth-child(2)::before{ content: "2"; }
 .dc-quiz-row:nth-child(3)::before{ content: "3"; }
 .dc-quiz-row:nth-child(4)::before{ content: "4"; }
 .dc-quiz-row:nth-child(5)::before{ content: "5"; }
 
-/* Eyebrow */
 .dc-quiz-eyebrow{
   color: var(--muted);
   margin-bottom: 10px;
 }
 
-/* Typography */
 .dc-quiz-group .item-title{
   color:#fff;
   margin: 0 0 16px;
@@ -891,13 +629,10 @@ background:
   font-weight:500;
   line-height:1.35;
 }
-
-.dc-quiz-group .item-body + .item-body{
-  margin-top: 8px;
-}
+.dc-quiz-group .item-body + .item-body{ margin-top: 8px; }
 
 /* =====================================
-   DARK (PLAIN BLACK) VARIANT
+   DARK VARIANT
    ===================================== */
 
 .dc-apple .dc-quiz-group{
@@ -911,23 +646,16 @@ background:
 .dc-apple .dc-quiz-row{
   border-top:1px solid rgba(255,255,255,0.06);
   margin-bottom: 30px;
-
 }
 
-.dc-apple .dc-quiz-header h2{
-  color:#ffffff;
-}
-.dc-apple .dc-quiz-header .subhead{
-  color:#8F8F8F;
-}
+.dc-apple .dc-quiz-header h2{ color:#ffffff; }
+.dc-apple .dc-quiz-header .subhead{ color:#8F8F8F; }
 .dc-apple .dc-quiz-header .package-category{
   color:#8F8F8F;
   font-size:18px;
   font-weight:500;
 }
-.dc-apple .dc-quiz-eyebrow{
-  color:rgba(255,255,255,0.5);
-}
+.dc-apple .dc-quiz-eyebrow{ color:rgba(255,255,255,0.5); }
 
 .dc-apple .dc-quiz-group .item-title{
   color:#ffffff;
@@ -942,23 +670,11 @@ background:
   line-height:1.35;
 }
 
-
-/* Dark mode number */
-.dc-apple .dc-quiz-row::before{
-  color: rgba(255,255,255,0.10);
-}
-
-.dc-quiz-eyebrow{
-  padding-top: 30px;   /* adjust number as needed */
-}
-
-
-
-
+.dc-apple .dc-quiz-row::before{ color: rgba(255,255,255,0.10); }
+.dc-quiz-eyebrow{ padding-top: 30px; }
 
 /* =====================================
-   Workflow ring diagram — 5 steps
-   Uses: dot style like .wf-dot + STEP style like .wf-label::before
+   Workflow ring diagram
    ===================================== */
 
 .dc-apple .dc-workflow-ring{
@@ -972,14 +688,12 @@ background:
   display: block;
 }
 
-/* Ring */
 .dc-apple .dc-workflow-ring .ring-track{
   fill: none;
   stroke: rgba(255,255,255,0.12);
   stroke-width: 2;
 }
 
-/* Dots (same feel as your .wf-dot: white + dark stroke, sits on the line) */
 .dc-apple .dc-workflow-ring .node circle{
   fill: #ffffff;
   stroke: rgba(15,15,17,1);
@@ -993,7 +707,6 @@ background:
   fill: #000;
 }
 
-/* STEP background text (same as your .wf-label::before) */
 .dc-apple .dc-workflow-ring .label-step{
   font-size: 42px;
   font-weight: 600;
@@ -1001,14 +714,12 @@ background:
   fill: rgba(255,255,255,0.20);
 }
 
-/* Title */
 .dc-apple .dc-workflow-ring .label-title{
   font-size: 19px;
   font-weight: 500;
   fill: rgba(255,255,255,0.88);
 }
 
-/* Center */
 .dc-apple .dc-workflow-ring .center-title{
   font-size: 28px;
   font-weight: 700;
@@ -1021,29 +732,19 @@ background:
   fill: rgba(255,255,255,0.60);
 }
 
-/* Mobile: same layout, just scale text + nodes slightly */
 @media (max-width: 520px){
   .dc-apple .dc-workflow-ring{ margin: 16px auto 18px; }
-
   .dc-apple .dc-workflow-ring .label-step{ font-size: 45px; }
   .dc-apple .dc-workflow-ring .label-title{ font-size: 24px; }
   .dc-apple .dc-workflow-ring .node-num{ font-size: 16px; }
-    /* 👇 THIS controls "Workflow" */
-  .dc-apple .dc-workflow-ring .center-title{
-    font-size: 34px;   /* increase or decrease */
-  }
-
-  /* 👇 THIS controls "5-step process" */
-  .dc-apple .dc-workflow-ring .center-sub{
-    font-size: 25px;   /* increase or decrease */
-  }
+  .dc-apple .dc-workflow-ring .center-title{ font-size: 34px; }
+  .dc-apple .dc-workflow-ring .center-sub{ font-size: 25px; }
 }
 
 /* ===========================
-   STOP ANY TEXT TRUNCATION
+   STOP TEXT TRUNCATION
    =========================== */
 
-/* 1) Kill single-line truncation + ellipsis */
 .dc-apple .dc-modal-textbox .item-title,
 .dc-apple .dc-modal-textbox .item-title strong,
 .dc-apple .dc-modal-textbox .item-body{
@@ -1054,7 +755,6 @@ background:
   word-break: break-word !important;
 }
 
-/* 2) Kill multi-line clamp (line-clamp / -webkit-box clamp) */
 .dc-apple .dc-modal-textbox .item-title,
 .dc-apple .dc-modal-textbox .item-title strong,
 .dc-apple .dc-modal-textbox .item-body{
@@ -1064,7 +764,6 @@ background:
   -webkit-box-orient: unset !important;
 }
 
-/* 3) If any parent is clipping, neutralize it */
 .dc-apple .dc-modal-textbox,
 .dc-apple .dc-modal-plain,
 .dc-apple .dc-quiz,
@@ -1075,7 +774,6 @@ background:
   height: auto !important;
 }
 
-/* 4) If you’re inside flex/grid somewhere, this prevents “no wrap” behavior */
 .dc-apple .dc-modal-textbox,
 .dc-apple .dc-modal-plain,
 .dc-apple .dc-modal-textbox .item-title,
@@ -1083,9 +781,7 @@ background:
   min-width: 0 !important;
 }
 
-.dc-apple .dc-workflow-ring{
-  width: 130%;
-}
+.dc-apple .dc-workflow-ring{ width: 130%; }
 
 @media (max-width: 520px){
   .dc-apple .dc-workflow-ring{
@@ -1095,12 +791,10 @@ background:
 }
 
 /* =========================================
-   Make STEP 1–5 match the SVG style
+   STEP styles
    ========================================= */
 
-/* Base STEP styling */
-.dc-apple .dc-modal-textbox.dc-modal-plain 
-.package-category.dc-quiz-eyebrow{
+.dc-apple .dc-modal-textbox.dc-modal-plain .package-category.dc-quiz-eyebrow{
   font-size: 42px;
   font-weight: 600;
   line-height: 1;
@@ -1109,17 +803,10 @@ background:
   margin: 0 0 12px;
 }
 
-/* Optional: adjust title to match SVG weight */
-.dc-apple .dc-modal-textbox.dc-modal-plain 
-.item-title{
+.dc-apple .dc-modal-textbox.dc-modal-plain .item-title{
   font-size: 19px;
   font-weight: 500;
 }
-
-
-/* =========================================
-   STEP-style heading for quiz sections
-   ========================================= */
 
 .dc-apple .dc-step-big{
   font-size: 42px;
@@ -1131,16 +818,12 @@ background:
   margin: 30px 0 12px;
 }
 
-/* Mobile */
 @media (max-width: 520px){
   .dc-apple .dc-step-big{
     font-size: 42px;
     margin-top: 40px;
-
   }
 }
-
-
 
 .title-inline{
   display:inline-flex;
@@ -1154,14 +837,13 @@ background:
   text-align: left;
 }
 
-
 .dc-apple .mini-package-category{
-  margin-top: 0px;      /* space above */
-    margin-bottom: -10px;   !important;
-  font-size: 0.75rem;    /* optional size tweak */
-    letter-spacing: 0.18em;
-  font-weight: 700;      /* 👈 add this */
-  opacity: 0.3;          /* optional */
+  margin-top: 0px;
+  margin-bottom: -10px !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  opacity: 0.3;
 }
 
 /* CTA wrapper */
@@ -1178,82 +860,53 @@ background:
   font-weight:500;
 }
 
-
 .dc-apple .dc-primary-btn{
   display: inline-block;
-
   background-color: #ffffff;
   color: #000000;
   border: 2px solid #ffffff;
-
   border-radius: 90px;
-
   text-decoration: none;
-
   padding: 1rem 9.2rem;
   font-size: 18px;
   line-height: 1.3;
   font-weight: 500;
-
   box-shadow: none;
 }
 
-/* Keep the CTA text on ONE line */
-.dc-apple .dc-primary-btn{
-  white-space: nowrap;     /* prevents "Book a discovery call" wrapping */
-}
+.dc-apple .dc-primary-btn{ white-space: nowrap; }
 
-/* Mobile: don’t use huge fixed side padding */
 @media (max-width: 520px){
   .dc-apple .dc-primary-btn{
-    padding: 0.9rem 1.4rem;  /* smaller, responsive */
+    padding: 0.9rem 1.4rem;
     max-width: 100%;
   }
 }
 
-
-/* only INNER dc-modal-plain cards (nested) */
 .dc-apple .dc-modal-plain .dc-modal-plain{
-  margin: 14px 0; /* change this value */
+  margin: 14px 0;
 }
 
-
-
-
 /* ================================
-   DC MODAL PLAIN (BASE) Keep this as your default
+   DC MODAL PLAIN (BASE)
    ================================ */
 
 .dc-apple .dc-modal-plain{
   position: relative;
-
   background: #0f0f11;
-
-  /* keep original subtle gray border */
   border: 1px solid rgba(255,255,255,0.08);
-
   border-radius: 16px;
-
-  padding: 15px 17px 30px; /* top space halved */
+  padding: 15px 17px 30px;
   margin: 30px 0;
-
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.05),
     0 18px 40px rgba(0,0,0,0.6);
 }
 
-
-
 /* =========================================================
-   AURORA BORDER OPTIONS (A/B/C/D)
-   Use ONE class at a time on the modal:
-   class="dc-modal-textbox dc-modal-plain aurora-a"
-   class="dc-modal-textbox dc-modal-plain aurora-b"
-   class="dc-modal-textbox dc-modal-plain aurora-c"
-   class="dc-modal-textbox dc-modal-plain aurora-d"
+   AURORA BORDER OPTIONS
    ========================================================= */
 
-/* Shared border-ring mechanics (no interior fill) */
 .dc-apple .dc-modal-plain.aurora-a::before,
 .dc-apple .dc-modal-plain.aurora-b::before,
 .dc-apple .dc-modal-plain.aurora-c::before,
@@ -1261,96 +914,45 @@ background:
   content:"";
   position:absolute;
   inset:0;
-  padding:1px; /* aurora border thickness */
+  padding:1px;
   border-radius:inherit;
   pointer-events:none;
-
-  /* border ring only — no interior fill */
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-
   mix-blend-mode: screen;
 }
 
-
-/* ================================
-   OPTION A (YOUR CURRENT COMBO)
-   ================================ */
-
 .dc-apple .dc-modal-plain.aurora-a::before{
   background:
-    /* soft white wash */
     radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.18), transparent 75%),
-
-    /* cyan */
     radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.42), transparent 80%),
-
-    /* violet */
     radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.64), transparent 72%),
-
-    /* pink */
     radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.80), transparent 85%);
 }
 
-
-/* ================================
-   OPTION B (MORE “TOP-RIGHT LIGHT”)
-   ================================ */
-
 .dc-apple .dc-modal-plain.aurora-b::before{
   background:
-    /* bright white top highlight */
     radial-gradient(300px 180px at 65% -15%, rgba(255,255,255,0.22), transparent 75%),
-
-    /* cyan edge shimmer */
     radial-gradient(210px 120px at 8% 18%, rgba(110,231,249,0.38), transparent 78%),
-
-    /* violet hit (top-right) */
     radial-gradient(280px 150px at 92% 10%, rgba(167,139,250,0.72), transparent 74%),
-
-    /* smaller pink accent (bottom-right) */
     radial-gradient(180px 150px at 88% 92%, rgba(251,194,235,0.68), transparent 82%);
 }
 
-
-/* ================================
-   OPTION C (MORE “BOTTOM GLOW”)
-   ================================ */
-
 .dc-apple .dc-modal-plain.aurora-c::before{
   background:
-    /* soft white wash */
     radial-gradient(280px 170px at 55% -12%, rgba(255,255,255,0.16), transparent 76%),
-
-    /* cyan (top-left) smaller + tighter */
     radial-gradient(190px 110px at 12% 12%, rgba(110,231,249,0.36), transparent 78%),
-
-    /* violet (top) stretched across */
     radial-gradient(320px 140px at 75% 0%, rgba(167,139,250,0.62), transparent 76%),
-
-    /* big pink glow (bottom-center) */
     radial-gradient(320px 220px at 55% 105%, rgba(251,194,235,0.78), transparent 82%);
 }
 
-
-/* ================================
-   OPTION D (MORE “LEFT-SIDE AURORA”)
-   ================================ */
-
 .dc-apple .dc-modal-plain.aurora-d::before{
   background:
-    /* white top wash */
     radial-gradient(280px 160px at 45% -12%, rgba(255,255,255,0.19), transparent 76%),
-
-    /* cyan (left) stronger */
     radial-gradient(320px 180px at -10% 55%, rgba(110,231,249,0.52), transparent 78%),
-
-    /* violet (right) softer */
     radial-gradient(240px 140px at 95% 25%, rgba(167,139,250,0.52), transparent 76%),
-
-    /* pink (bottom-right) medium */
     radial-gradient(220px 180px at 85% 98%, rgba(251,194,235,0.66), transparent 84%);
 }
