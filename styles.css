@@ -2,8 +2,8 @@
    CARD TYPOGRAPHY
    ================================ */
 
-.dc, .dc * {
-  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+.dc, .dc * { 
+  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
 }
 
 /* Card title styling */
@@ -408,7 +408,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
 /* ===============================
    PACKAGE CHECKLIST
-   Hover = old colorful border only
+   Hover = exact old colorful border only
    =============================== */
 
 .dc-apple .package-checklist{
@@ -422,7 +422,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   overflow: hidden;
 }
 
-/* old colorful border ring (hidden by default) */
+/* exact old aurora border recipe */
 .dc-apple .package-checklist::before{
   content:"";
   position:absolute;
@@ -431,7 +431,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   border-radius:inherit;
   pointer-events:none;
   opacity:0;
-  transition: opacity .25s ease;
+  transition: opacity .22s ease;
 
   background:
     radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.18), transparent 75%),
@@ -448,13 +448,17 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   mix-blend-mode: screen;
 }
 
-/* Show colorful border only on hover */
-.dc-apple .package-checklist:hover::before{ opacity: 1; }
+/* only hover */
+.dc-apple .package-checklist:hover::before{
+  opacity:1;
+}
 
-/* Disable interior aurora fill */
-.dc-apple .package-checklist::after{ display: none; }
+/* remove any fill glow layer */
+.dc-apple .package-checklist::after{
+  display:none !important;
+}
 
-/* PACKAGE badge: solid border + 2x more inner spacing */
+/* PACKAGE badge */
 .dc-apple .package-checklist .package-category{
   display:inline-flex !important;
   align-items:center;
@@ -492,7 +496,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 .dc-apple .package-checklist .package-title::after{
   display:block;
   margin-top:40px;
-  margin-bottom:10px; /* requested space to item text */
+  margin-bottom:10px;
   font-size:21px;
   font-weight:500;
   line-height:1.2;
@@ -500,25 +504,25 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   content:"";
 }
 
-/* per-card subtitle (order-based) */
+/* per-card subtitle */
 .dc-apple .package-checklist:nth-of-type(1) .package-title::after{ content:"Research & Strategy"; }
 .dc-apple .package-checklist:nth-of-type(2) .package-title::after{ content:"Strategy & Execution"; }
 .dc-apple .package-checklist:nth-of-type(3) .package-title::after{ content:"Executive Leadership"; }
 
-/* checklist text (description) */
+/* description */
 .dc-apple .package-checklist .item-body{
   color:#8b8b8f;
-  font-size:17px;      /* requested */
+  font-size:17px;
   font-weight:500;
   line-height:1.35;
-  margin:0 0 14px;     /* space to gray line */
+  margin:0 0 14px;
 }
 
 /* list area */
 .dc-apple .package-checklist ul{
   list-style:none;
   margin:0;
-  padding:30px 0 0;    /* space from line to list */
+  padding:30px 0 0;
   border-top:1px solid #212121;
 }
 
@@ -527,7 +531,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   align-items:flex-start;
   gap:12px;
   color:#f2f2f2;
-  font-size:17px;      /* requested */
+  font-size:17px;
   font-weight:500;
   line-height:1.35;
   margin-bottom:10px;
