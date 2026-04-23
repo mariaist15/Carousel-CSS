@@ -1,9 +1,9 @@
 /* ================================
-   CARD TYPOGRAPHY (Switzer)
+   CARD TYPOGRAPHY
    ================================ */
 
-.dc, .dc * { 
-  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+.dc, .dc * {
+  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 /* Card title styling */
@@ -51,21 +51,32 @@
   background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,.2) 45%, rgba(0,0,0,0) 70%);
 }
 
-/* Content spans full card; title at top (10% offset) */
-.dc .dc-card-content{ position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; justify-content:space-between; padding:10% 16px 16px; }
+.dc .dc-card-content{
+  position:absolute; inset:0; z-index:2;
+  display:flex; flex-direction:column; justify-content:space-between;
+  padding:10% 16px 16px;
+}
 
-/* No text-shadow on title & description */
 .dc .dc-card h3,.dc .dc-card p{ margin:0; color:#fff; text-shadow:none; }
-
-/* Title 40% smaller than before (2.1rem → 1.26rem) */
 .dc .dc-card p { font:400 .95rem/1.4 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; opacity:.95; }
 
 /* Controls */
-.dc-controls{ margin-top:36px; width:100%; display:flex; justify-content:flex-end; gap:10px; padding-right:var(--padX); box-sizing: border-box; }
-.dc-btn{ width:32px; height:32px; border-radius:9999px; border:0; background:rgba(255,255,255,.10); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:inline-flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; transition:transform .12s ease, background .2s ease; -webkit-appearance:none; appearance:none; color:#9a9a9a; position: relative; z-index: 2; }
+.dc-controls{
+  margin-top:36px; width:100%; display:flex; justify-content:flex-end; gap:10px;
+  padding-right:var(--padX); box-sizing: border-box;
+}
+.dc-btn{
+  width:32px; height:32px; border-radius:9999px; border:0; background:rgba(255,255,255,.10);
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  display:inline-flex; align-items:center; justify-content:center;
+  cursor:pointer; user-select:none; transition:transform .12s ease, background .2s ease;
+  -webkit-appearance:none; appearance:none; color:#9a9a9a; position: relative; z-index: 2;
+}
 .dc-btn:hover{ background:rgba(255,255,255,.16); transform:translateY(-1px); }
 .dc-btn svg{ display:block; width:20px; height:20px; overflow:visible; }
-@media (hover: none) and (pointer: coarse){ .dc-btn{ backdrop-filter:none; -webkit-backdrop-filter:none; background:rgba(255,255,255,.14); } }
+@media (hover: none) and (pointer: coarse){
+  .dc-btn{ backdrop-filter:none; -webkit-backdrop-filter:none; background:rgba(255,255,255,.14); }
+}
 
 .dc-reveal{
   position:absolute; right:20px; bottom:20px; z-index:3; padding:8px 12px; border-radius:9999px; border:0; cursor:pointer;
@@ -78,24 +89,14 @@
 html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-behavior: none; }
 
 .dc-modal{
-  position: fixed;
-  inset: 0;
-  z-index: 2147483646;
-  display: grid;
-  place-items: center;
-  align-items: end;
-  justify-items: center;
-  padding: 0;
-  opacity: 1;
-  transition: opacity .0s ease;
+  position: fixed; inset: 0; z-index: 2147483646;
+  display: grid; place-items: center; align-items: end; justify-items: center;
+  padding: 0; opacity: 1; transition: opacity .0s ease;
 }
-
 .dc-modal[aria-hidden="true"]{ opacity: 0; pointer-events: none; }
 
 .dc-modal-backdrop{
-  position: fixed;
-  inset: 0;
-  z-index: 0;
+  position: fixed; inset: 0; z-index: 0;
   background: none !important;
   background-color: rgba(255, 255, 255, .09) !important;
   -webkit-backdrop-filter: blur(6px) !important;
@@ -118,20 +119,13 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 .dc-modal-panel{
-  position: relative;
-  z-index: 2147483647;
-  width: min(1196px, 92vw);
-  max-height: 100dvh;
-  background: #0f0f10;
-  color: #f3f3f3;
+  position: relative; z-index: 2147483647;
+  width: min(1196px, 92vw); max-height: 100dvh;
+  background: #0f0f10; color: #f3f3f3;
   border-radius: 16px 16px 0 0;
   box-shadow: 0 20px 80px rgba(0,0,0,.55);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transform: translateY(8px);
-  opacity: 0;
-  margin: 0;
+  overflow: hidden; display: flex; flex-direction: column;
+  transform: translateY(8px); opacity: 0; margin: 0;
 }
 
 @media (min-width:900px){
@@ -144,13 +138,11 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
 @media (max-width:899.98px){
   .dc-modal{
-    align-items: start;
-    justify-items: stretch;
+    align-items: start; justify-items: stretch;
     --mtop: max(48px, calc(env(safe-area-inset-top) * 6));
   }
   .dc-modal-panel{
-    width: 100vw;
-    max-width: 100vw;
+    width: 100vw; max-width: 100vw;
     margin: var(--mtop) 0 0;
     border-radius: 16px 16px 0 0;
     height: calc(100dvh - var(--mtop));
@@ -172,24 +164,15 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 .dc-modal-body{
   --padTop: 100px;
   padding: var(--padTop) 10px 200px;
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  flex: 1 1 auto; min-height: 0; overflow-y: auto;
+  -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
 }
 
 @media (min-width: 900px){
-  .dc-modal-body{
-    padding-left: 96px;
-    padding-right: 96px;
-  }
+  .dc-modal-body{ padding-left: 96px; padding-right: 96px; }
 }
 
-.dc-modal-body h2,
-.dc-modal-body h3{
-  margin: .5rem 0 1rem;
-}
+.dc-modal-body h2, .dc-modal-body h3{ margin: .5rem 0 1rem; }
 
 .dc-modal-body h2{
   color: #ffffff !important;
@@ -199,17 +182,11 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin-bottom: calc(1rem - var(--h2Shift));
 }
 
-.dc-modal-body p,
-.dc-modal-body ul{
-  margin: 0 0 1rem;
-}
+.dc-modal-body p, .dc-modal-body ul{ margin: 0 0 1rem; }
 
 .dc-modal-body img{
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin: 1rem 0 2rem;
+  display: block; width: 100%; height: auto;
+  border-radius: 10px; margin: 1rem 0 2rem;
 }
 
 /* Text containers */
@@ -229,9 +206,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 .dc-cta:hover{ background:rgba(255,255,255,.20); transform:translateY(-1px); }
 
-@media (hover: none) and (pointer: coarse){
-  .dc .dc-card a { pointer-events: none; }
-}
+@media (hover: none) and (pointer: coarse){ .dc .dc-card a { pointer-events: none; } }
 
 .dc-modal-body img {
   opacity: 1 !important;
@@ -373,7 +348,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 .dc-apple .dc-modal-textbox.step-card .item-body{ color: #BAB8B8; }
 
 /* ===============================
-   ITEM TITLE
+   ITEM TITLE / BODY
    =============================== */
 
 .dc-apple .item-title{
@@ -432,7 +407,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 /* ===============================
-   PACKAGE CHECKLIST (UPDATED)
+   PACKAGE CHECKLIST
+   Hover = old colorful border only
    =============================== */
 
 .dc-apple .package-checklist{
@@ -446,7 +422,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   overflow: hidden;
 }
 
-/* BORDER-ONLY colorful hover (old style, reduced intensity) */
+/* old colorful border ring (hidden by default) */
 .dc-apple .package-checklist::before{
   content:"";
   position:absolute;
@@ -456,45 +432,48 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   pointer-events:none;
   opacity:0;
   transition: opacity .25s ease;
+
   background:
-    radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.09), transparent 75%),
-    radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.21), transparent 80%),
-    radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.32), transparent 72%),
-    radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.40), transparent 85%);
+    radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.18), transparent 75%),
+    radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.42), transparent 80%),
+    radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.64), transparent 72%),
+    radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.80), transparent 85%);
+
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+
   mix-blend-mode: screen;
 }
 
+/* Show colorful border only on hover */
 .dc-apple .package-checklist:hover::before{ opacity: 1; }
 
-.dc-apple .package-checklist::after{
-  display: none;
-}
+/* Disable interior aurora fill */
+.dc-apple .package-checklist::after{ display: none; }
 
-/* PACKAGE badge */
+/* PACKAGE badge: solid border + 2x more inner spacing */
 .dc-apple .package-checklist .package-category{
   display:inline-flex !important;
   align-items:center;
   justify-content:center;
-  padding:6px 12px;
-  border:1px solid #2b2b2b;
-  border-radius:10px;
-  background:transparent !important;
-  color:#d8d8d8 !important;
-  font-size:14px !important;
-  font-weight:500 !important;
-  line-height:1;
-  letter-spacing:0;
-  text-transform:none !important;
-  margin:0 0 18px !important;
-  box-shadow:none !important;
+  padding: 12px 24px;
+  border: 1px solid #2b2b2b;
+  border-radius: 10px;
+  background: transparent !important;
+  color: #d8d8d8 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none !important;
+  margin: 0 0 18px !important;
+  box-shadow: none !important;
 }
 
-/* title + subtitle */
+/* package title */
 .dc-apple .package-checklist .package-title,
 .dc-apple .package-checklist .package-title.is-text-outline{
   color:#ffffff;
@@ -509,9 +488,11 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin:0;
 }
 
+/* subtitle under title */
 .dc-apple .package-checklist .package-title::after{
   display:block;
   margin-top:40px;
+  margin-bottom:10px; /* requested space to item text */
   font-size:21px;
   font-weight:500;
   line-height:1.2;
@@ -519,30 +500,25 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   content:"";
 }
 
-.dc-apple .package-checklist:nth-of-type(1) .package-title::after{
-  content:"Research & Strategy";
-}
-.dc-apple .package-checklist:nth-of-type(2) .package-title::after{
-  content:"Strategy & Execution";
-}
-.dc-apple .package-checklist:nth-of-type(3) .package-title::after{
-  content:"Executive Leadership";
-}
+/* per-card subtitle (order-based) */
+.dc-apple .package-checklist:nth-of-type(1) .package-title::after{ content:"Research & Strategy"; }
+.dc-apple .package-checklist:nth-of-type(2) .package-title::after{ content:"Strategy & Execution"; }
+.dc-apple .package-checklist:nth-of-type(3) .package-title::after{ content:"Executive Leadership"; }
 
-/* description */
+/* checklist text (description) */
 .dc-apple .package-checklist .item-body{
   color:#8b8b8f;
-  font-size:17px;
+  font-size:17px;      /* requested */
   font-weight:500;
   line-height:1.35;
-  margin:0 0 14px;
+  margin:0 0 14px;     /* space to gray line */
 }
 
-/* divider + checklist spacing */
+/* list area */
 .dc-apple .package-checklist ul{
   list-style:none;
   margin:0;
-  padding:30px 0 0;
+  padding:30px 0 0;    /* space from line to list */
   border-top:1px solid #212121;
 }
 
@@ -551,16 +527,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   align-items:flex-start;
   gap:12px;
   color:#f2f2f2;
-  font-size:clamp(1.05rem, 1.2vw, 1.22rem);
+  font-size:17px;      /* requested */
   font-weight:500;
   line-height:1.35;
   margin-bottom:10px;
 }
-
 .dc-apple .package-checklist li:last-child{ margin-bottom:0; }
 
-.dc-apple .package-checklist .check,
-.dc-apple .dc-modal-textbox.dc-modal-plain .check{
+.dc-apple .package-checklist .check{
   width:auto;
   height:auto;
   min-width:22px;
@@ -580,27 +554,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 /* =====================================
-   PLAIN BLACK PACKAGE (kept)
-   ===================================== */
-
-.dc-apple .package-checklist.package-plain{
-  background: #0f0f11;
-}
-
-.dc-apple .package-checklist.package-plain::after{
-  display: none;
-}
-
-.dc-apple .package-checklist.package-plain .package-title{
-  color: #ffffff;
-  background: none;
-  -webkit-text-stroke: 0;
-  text-shadow: none;
-}
-
-/* =====================================================
    QUIZ
-   ===================================================== */
+   ===================================== */
 
 .dc-quiz{
   --hairline: rgba(0,0,0,.10);
