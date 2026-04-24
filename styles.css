@@ -417,16 +417,16 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   border-radius:15px;
   padding:36px 24px 30px;
   margin:20px 0 32px;
-  border:1px solid rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.85); /* white base border */
   background-clip:padding-box;
   box-shadow:none;
   overflow:hidden;
-  transition: border-color .35s ease;
+  transition: border-color .25s ease;
   --mx: 50%;
   --my: 50%;
 }
 
-/* colorful border ring only (no white fill layer) */
+/* colored border overlay (ring only) */
 .dc-apple .package-checklist::before{
   content:"";
   position:absolute;
@@ -435,8 +435,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   border-radius:inherit;
   pointer-events:none;
   opacity:0;
-  transition: opacity .25s ease;
-
+  transition: opacity .2s ease;
   background: linear-gradient(
     90deg,
     #eab308 0%,
@@ -451,17 +450,21 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+
+  /* THIS is the text-like reveal radius */
+  clip-path: circle(20% at var(--mx) var(--my));
+  -webkit-clip-path: circle(20% at var(--mx) var(--my));
 }
 
-/* IMPORTANT: remove white overlay that was washing out the card */
+/* no white overlay fill */
 .dc-apple .package-checklist::after{
   content:none;
 }
 
-/* Hover on */
 .dc-apple .package-checklist:hover::before{
   opacity:1;
 }
+
 
 .dc-apple .package-checklist:hover{
   border-color: rgba(255,255,255,0.24);
