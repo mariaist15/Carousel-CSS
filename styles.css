@@ -408,7 +408,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
 /* ===============================
    PACKAGE CHECKLIST
-   exact old aurora look
+   fixed aurora + fixed subtitle mapping
    =============================== */
 
 .dc-apple .package-checklist{
@@ -441,7 +441,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   overflow:hidden;
 }
 
-/* exact old colorful border ring (always on) */
+/* stronger old colorful border ring */
 .dc-apple .package-checklist::before{
   content:"";
   position:absolute;
@@ -452,10 +452,10 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   opacity:1;
 
   background:
-    radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.18), transparent 75%),
-    radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.42), transparent 80%),
-    radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.64), transparent 72%),
-    radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.80), transparent 85%);
+    radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.22), transparent 75%),
+    radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.56), transparent 80%),
+    radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.72), transparent 72%),
+    radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.82), transparent 85%);
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -466,7 +466,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   mix-blend-mode: screen;
 }
 
-/* exact old interior aurora glow */
+/* stronger interior aurora glow */
 .dc-apple .package-checklist::after{
   content:"";
   position:absolute;
@@ -475,12 +475,12 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   pointer-events:none;
 
   background:
-    radial-gradient(900px 420px at 12% 18%, rgba(110,231,249,0.11), rgba(0,0,0,0) 60%),
-    radial-gradient(700px 360px at 75% 8%,  rgba(167,139,250,0.11), rgba(0,0,0,0) 62%),
-    radial-gradient(600px 320px at 92% 80%, rgba(251,194,235,0.09), rgba(0,0,0,0) 58%),
-    linear-gradient(120deg, rgba(255,255,255,0.11), rgba(255,255,255,0.05), rgba(255,255,255,0.00));
+    radial-gradient(900px 420px at 12% 18%, rgba(110,231,249,0.13), rgba(0,0,0,0) 60%),
+    radial-gradient(700px 360px at 75% 8%,  rgba(167,139,250,0.14), rgba(0,0,0,0) 62%),
+    radial-gradient(600px 320px at 92% 80%, rgba(251,194,235,0.11), rgba(0,0,0,0) 58%),
+    linear-gradient(120deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05), rgba(255,255,255,0.00));
 
-  opacity:0.75;
+  opacity:0.85;
   mix-blend-mode:screen;
 }
 
@@ -510,7 +510,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   background:none;
   -webkit-text-stroke:0;
   -webkit-text-fill-color:#ffffff;
-  text-shadow:none;
+  text-shadow: 0 0 12px rgba(195,220,255,0.12);
   font-weight:600;
   font-size:30px;
   line-height:1.1;
@@ -530,10 +530,13 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   content:"";
 }
 
-/* per-card subtitle */
+/* robust subtitle mapping */
 .dc-apple .package-checklist:nth-of-type(1) .package-title::after{ content:"Research & Strategy"; }
 .dc-apple .package-checklist:nth-of-type(2) .package-title::after{ content:"Strategy & Execution"; }
 .dc-apple .package-checklist:nth-of-type(3) .package-title::after{ content:"Executive Leadership"; }
+.dc-apple .package-checklist:nth-of-type(4) .package-title::after{ content:"Research & Strategy"; }
+.dc-apple .package-checklist:nth-of-type(5) .package-title::after{ content:"Strategy & Execution"; }
+.dc-apple .package-checklist:nth-of-type(6) .package-title::after{ content:"Executive Leadership"; }
 
 /* description */
 .dc-apple .package-checklist .item-body{
