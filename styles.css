@@ -458,7 +458,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
 /* ONLY ON HOVER */
 .dc-apple .package-checklist:hover::before{
-  opacity:0.7;
+  opacity:1;
 }
 
 .dc-apple .package-checklist:hover{
