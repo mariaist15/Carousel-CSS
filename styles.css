@@ -406,83 +406,27 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   max-width:none;
 }
 
+/* ===============================
+   PACKAGE CHECKLIST
+   React/SVG hover border version
+   =============================== */
+
 .dc-apple .package-checklist{
   position:relative;
   background:#050506;
   border-radius:15px;
   padding:36px 24px 30px;
   margin:20px 0 32px;
-  border:1px solid rgba(255,255,255,0.12); /* gray base border */
+  border:1px solid rgba(255,255,255,0.12);
   background-clip:padding-box;
   box-shadow:none;
   overflow:hidden;
-  transition:border-color .25s ease;
-  --mx: 50%;
-  --my: 50%;
-  --bx: 50%;
-  --by: 0%;
-  --reveal-r: 20%;
 }
 
-/* gray ring always visible */
-.dc-apple .package-checklist::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  padding:1px;
-  border-radius:inherit;
-  pointer-events:none;
-  background:linear-gradient(0deg, rgba(255,255,255,.12), rgba(255,255,255,.12));
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-  opacity:1;
-}
-
-/* colorful soft fade reveal */
-.dc-apple .package-checklist::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  padding:1px;
-  border-radius:inherit;
-  pointer-events:none;
-  opacity:0;
-  transition:opacity .2s ease;
-  background:
-    radial-gradient(
-      circle var(--reveal-r) at var(--bx) var(--by),
-      rgba(255,255,255,1) 0%,
-      rgba(255,255,255,.68) 36%,
-      rgba(255,255,255,.20) 68%,
-      rgba(255,255,255,0) 100%
-    ),
-    linear-gradient(
-      90deg,
-      #eab308 0%,
-      #ef4444 25%,
-      #3b82f6 50%,
-      #06b6d4 75%,
-      #8b5cf6 100%
-    );
-  background-blend-mode:multiply;
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-}
-
-.dc-apple .package-checklist:hover::after{
-  opacity:1;
-}
-
-
-
-.dc-apple .package-checklist:hover{
-  border-color: rgba(255,255,255,0.24);
+/* keep content above injected svg border layer */
+.dc-apple .package-checklist > *{
+  position: relative;
+  z-index: 2;
 }
 
 /* PACKAGE badge */
@@ -586,10 +530,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
 }
-
-
-
-
 
 /* =====================================
    QUIZ
