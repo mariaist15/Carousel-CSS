@@ -426,7 +426,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   --my: 50%;
 }
 
-/* Border layer (white + gradient), masked by cursor circle */
+/* colorful border ring only (no white fill layer) */
 .dc-apple .package-checklist::before{
   content:"";
   position:absolute;
@@ -437,9 +437,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   opacity:0;
   transition: opacity .25s ease;
 
-  background:
-    linear-gradient(135deg, rgba(255,255,255,.9), rgba(255,255,255,.9)),
-    linear-gradient(90deg, #eab308 0%, #ef4444 25%, #3b82f6 50%, #06b6d4 75%, #8b5cf6 100%);
+  background: linear-gradient(
+    90deg,
+    #eab308 0%,
+    #ef4444 25%,
+    #3b82f6 50%,
+    #06b6d4 75%,
+    #8b5cf6 100%
+  );
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -448,28 +453,18 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   mask-composite: exclude;
 }
 
-/* Reveal only around cursor */
+/* IMPORTANT: remove white overlay that was washing out the card */
 .dc-apple .package-checklist::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  opacity:0;
-  transition: opacity .25s ease;
-
-  background:#fff;
-  -webkit-mask-image: radial-gradient(circle 16% at var(--mx) var(--my), #000 0%, #000 55%, transparent 100%);
-  mask-image: radial-gradient(circle 16% at var(--mx) var(--my), #000 0%, #000 55%, transparent 100%);
+  content:none;
 }
 
 /* Hover on */
-.dc-apple .package-checklist:hover::before,
-.dc-apple .package-checklist:hover::after{
+.dc-apple .package-checklist:hover::before{
   opacity:1;
 }
 
 .dc-apple .package-checklist:hover{
-  border-color: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.24);
 }
 
 /* PACKAGE badge */
@@ -573,6 +568,10 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
 }
+
+
+
+
 
 /* =====================================
    QUIZ
