@@ -424,9 +424,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   transition: border-color .35s ease;
 }
 
-/* hover-only colorful border (no fill) */
+/* hover-only colorful border (white base + 50% old aurora colors) */
 .dc-apple .package-checklist::before{
-  --aurora-alpha: 0.65;
   content:"";
   position:absolute;
   inset:0;
@@ -436,12 +435,10 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
   background:
     linear-gradient(135deg, #ffffff, #ffffff),
-    linear-gradient(
-      135deg,
-      rgba(110,231,249,var(--aurora-alpha)),
-      rgba(167,139,250,var(--aurora-alpha)),
-      rgba(251,194,235,var(--aurora-alpha))
-    );
+    radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.11), transparent 75%),
+    radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.28), transparent 80%),
+    radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.36), transparent 72%),
+    radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.41), transparent 85%);
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -568,6 +565,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
 }
+
 
 /* =====================================
    QUIZ
