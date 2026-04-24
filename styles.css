@@ -435,12 +435,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 .dc-apple .package-checklist:hover{
-  border-color: rgba(255,255,255,0.58);
+  border-color: rgba(255,255,255,0.95);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.22),
-    0 0 0 1px rgba(255,255,255,0.16),
-    0 0 26px rgba(255,255,255,0.20);
+    inset 0 1px 0 rgba(255,255,255,0.55),
+    0 0 0 1px rgba(255,255,255,0.50),
+    0 0 42px rgba(255,255,255,0.60),
+    0 0 80px rgba(255,255,255,0.35);
 }
+
 
 /* PACKAGE badge */
 .dc-apple .package-checklist .package-category{
