@@ -424,7 +424,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   transition: border-color .35s ease;
 }
 
-/* hover-only colorful border (white base + 50% old aurora colors) */
 .dc-apple .package-checklist::before{
   content:"";
   position:absolute;
@@ -435,10 +434,10 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
   background:
     linear-gradient(135deg, rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
-    radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.14), transparent 75%),
-    radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.42), transparent 80%),
-    radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.50), transparent 72%),
-    radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.58), transparent 85%);
+    radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.24), transparent 75%),
+    radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.71), transparent 80%),
+    radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.85), transparent 72%),
+    radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.99), transparent 85%);
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -447,7 +446,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   mask-composite: exclude;
 
   opacity:0;
-  transition: opacity .35s ease;
+  transition: opacity .15s ease;
 }
 
 
