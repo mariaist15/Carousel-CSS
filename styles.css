@@ -1,15 +1,12 @@
-GITHUB CSS WORKING CODE (23 APR)
-
-
 /* ================================
-   CARD TYPOGRAPHY (Switzer)
+   CARD TYPOGRAPHY
    ================================ */
 
 .dc, .dc * { 
-  font-family: 'Switzer', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
 }
 
- /* Card title styling */
+/* Card title styling */
 .dc .dc-card h3{
   font-size: 1.5rem !important;
   font-weight: 500 !important;
@@ -19,9 +16,9 @@ GITHUB CSS WORKING CODE (23 APR)
   color: #ffffff;
 }
 
-/* Base font */ 
-.dc, .dc *{ 
-  font-family: 'Switzer', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+/* Base font */
+.dc, .dc *{
+  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 /* ===== Scoped vars ===== */
@@ -45,7 +42,7 @@ GITHUB CSS WORKING CODE (23 APR)
   border-radius:20px; overflow:hidden; background:#0f0f10; margin:0 !important;
   box-shadow:0 6px 18px rgba(0,0,0,.18);
 }
-@media (min-width:900px){ .dc .dc-card{ width:392px; height:578px; } } /* desktop -20% width */
+@media (min-width:900px){ .dc .dc-card{ width:392px; height:578px; } }
 
 .dc .dc-card a{ position:relative; display:block; height:100%; color:inherit; text-decoration:none; }
 .dc .dc-card img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
@@ -54,25 +51,36 @@ GITHUB CSS WORKING CODE (23 APR)
   background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,.2) 45%, rgba(0,0,0,0) 70%);
 }
 
-/* Content spans full card; title at top (10% offset) */
-.dc .dc-card-content{ position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; justify-content:space-between; padding:10% 16px 16px; }
+.dc .dc-card-content{
+  position:absolute; inset:0; z-index:2;
+  display:flex; flex-direction:column; justify-content:space-between;
+  padding:10% 16px 16px;
+}
 
-/* No text-shadow on title & description */
 .dc .dc-card h3,.dc .dc-card p{ margin:0; color:#fff; text-shadow:none; }
-
-/* Title 40% smaller than before (2.1rem → 1.26rem) */
-.dc .dc-card p { font:400 .95rem/1.4 'Switzer', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; opacity:.95; }
+.dc .dc-card p { font:400 .95rem/1.4 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; opacity:.95; }
 
 /* Controls */
-.dc-controls{ margin-top:36px; width:100%; display:flex; justify-content:flex-end; gap:10px; padding-right:var(--padX); box-sizing: border-box; }
-.dc-btn{ width:32px; height:32px; border-radius:9999px; border:0; background:rgba(255,255,255,.10); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:inline-flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; transition:transform .12s ease, background .2s ease; -webkit-appearance:none; appearance:none; color:#9a9a9a; position: relative; z-index: 2; }
+.dc-controls{
+  margin-top:36px; width:100%; display:flex; justify-content:flex-end; gap:10px;
+  padding-right:var(--padX); box-sizing: border-box;
+}
+.dc-btn{
+  width:32px; height:32px; border-radius:9999px; border:0; background:rgba(255,255,255,.10);
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  display:inline-flex; align-items:center; justify-content:center;
+  cursor:pointer; user-select:none; transition:transform .12s ease, background .2s ease;
+  -webkit-appearance:none; appearance:none; color:#9a9a9a; position: relative; z-index: 2;
+}
 .dc-btn:hover{ background:rgba(255,255,255,.16); transform:translateY(-1px); }
 .dc-btn svg{ display:block; width:20px; height:20px; overflow:visible; }
-@media (hover: none) and (pointer: coarse){ .dc-btn{ backdrop-filter:none; -webkit-backdrop-filter:none; background:rgba(255,255,255,.14); } }
+@media (hover: none) and (pointer: coarse){
+  .dc-btn{ backdrop-filter:none; -webkit-backdrop-filter:none; background:rgba(255,255,255,.14); }
+}
 
 .dc-reveal{
   position:absolute; right:20px; bottom:20px; z-index:3; padding:8px 12px; border-radius:9999px; border:0; cursor:pointer;
-  background:rgba(255,255,255,.16); color:#ffffff; font:600 .92rem/1 'Switzer', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; letter-spacing:.2px;
+  background:rgba(255,255,255,.16); color:#ffffff; font:600 .92rem/1 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; letter-spacing:.2px;
   -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
   transition: transform .15s ease, background .2s ease, opacity .2s ease; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
 }
@@ -81,24 +89,14 @@ GITHUB CSS WORKING CODE (23 APR)
 html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-behavior: none; }
 
 .dc-modal{
-  position: fixed;
-  inset: 0;
-  z-index: 2147483646;
-  display: grid;
-  place-items: center;
-  align-items: end;
-  justify-items: center;
-  padding: 0;
-  opacity: 1;
-  transition: opacity .0s ease;
+  position: fixed; inset: 0; z-index: 2147483646;
+  display: grid; place-items: center; align-items: end; justify-items: center;
+  padding: 0; opacity: 1; transition: opacity .0s ease;
 }
-
 .dc-modal[aria-hidden="true"]{ opacity: 0; pointer-events: none; }
 
 .dc-modal-backdrop{
-  position: fixed;
-  inset: 0;
-  z-index: 0;
+  position: fixed; inset: 0; z-index: 0;
   background: none !important;
   background-color: rgba(255, 255, 255, .09) !important;
   -webkit-backdrop-filter: blur(6px) !important;
@@ -120,22 +118,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   .dc-modal-backdrop{ background-color: rgba(0,0,0,.35) !important; }
 }
 
-/* Square bottom corners + touches viewport bottom */
 .dc-modal-panel{
-  position: relative;
-  z-index: 2147483647;
-  width: min(1196px, 92vw);
-  max-height: 100dvh;
-  background: #0f0f10;
-  color: #f3f3f3;
+  position: relative; z-index: 2147483647;
+  width: min(1196px, 92vw); max-height: 100dvh;
+  background: #0f0f10; color: #f3f3f3;
   border-radius: 16px 16px 0 0;
   box-shadow: 0 20px 80px rgba(0,0,0,.55);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transform: translateY(8px);
-  opacity: 0;
-  margin: 0;
+  overflow: hidden; display: flex; flex-direction: column;
+  transform: translateY(8px); opacity: 0; margin: 0;
 }
 
 @media (min-width:900px){
@@ -148,13 +138,11 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
 @media (max-width:899.98px){
   .dc-modal{
-    align-items: start;
-    justify-items: stretch;
+    align-items: start; justify-items: stretch;
     --mtop: max(48px, calc(env(safe-area-inset-top) * 6));
   }
   .dc-modal-panel{
-    width: 100vw;
-    max-width: 100vw;
+    width: 100vw; max-width: 100vw;
     margin: var(--mtop) 0 0;
     border-radius: 16px 16px 0 0;
     height: calc(100dvh - var(--mtop));
@@ -172,37 +160,19 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 .dc-scrolltop{ position: absolute; right: 12px; bottom: 12px; opacity: 0; pointer-events: none; transition: opacity .18s ease; }
 .dc-scrolltop.is-visible{ opacity: 1; pointer-events: auto; }
 
-
-
-/* VIEWPORT DISTANCE: DISTANCE BETWEEN VIEWPORT ADN DC MODAL/TEXT */
-
 /* Modal content */
 .dc-modal-body{
   --padTop: 100px;
-
-  /* Mobile-first: VIEWPORT EDGES DISTANCE TO DC MODAL/TEXT */
   padding: var(--padTop) 10px 200px;
-
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  flex: 1 1 auto; min-height: 0; overflow-y: auto;
+  -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
 }
 
-/* Desktop: wider gutters */
 @media (min-width: 900px){
-  .dc-modal-body{
-    padding-left: 96px;
-    padding-right: 96px;
-  }
+  .dc-modal-body{ padding-left: 96px; padding-right: 96px; }
 }
 
-/* Headings & content */
-.dc-modal-body h2,
-.dc-modal-body h3{
-  margin: .5rem 0 1rem;
-}
+.dc-modal-body h2, .dc-modal-body h3{ margin: .5rem 0 1rem; }
 
 .dc-modal-body h2{
   color: #ffffff !important;
@@ -212,47 +182,31 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin-bottom: calc(1rem - var(--h2Shift));
 }
 
-.dc-modal-body p,
-.dc-modal-body ul{
-  margin: 0 0 1rem;
-}
+.dc-modal-body p, .dc-modal-body ul{ margin: 0 0 1rem; }
 
 .dc-modal-body img{
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin: 1rem 0 2rem;
+  display: block; width: 100%; height: auto;
+  border-radius: 10px; margin: 1rem 0 2rem;
 }
 
 /* Text containers */
 .dc-modal-textbox{ background:#191919; padding:32px 36px; border-radius:10px; margin:1rem 0 2rem; }
 .dc-modal-textbox p:last-child{ margin-bottom:0; }
 
-/* GRAY CARD space and TEXT INSIDE – mobile */
 @media (max-width: 768px){
-  .dc-modal-textbox{
-    padding: 22px 16px 22px 16px;
-  }
-
-  .dc-apple .dc-modal-textbox{
-    padding: 22px 16px 22px 16px;
-  }
+  .dc-modal-textbox{ padding: 22px 16px 22px 16px; }
+  .dc-apple .dc-modal-textbox{ padding: 22px 16px 22px 16px; }
 }
-
 
 /* CTA */
 .dc-cta{
   display:inline-flex; align-items:center; justify-content:center; padding:8px 12px; border-radius:9999px; border:0; cursor:pointer;
-  background:rgba(255,255,255,.16); color:#ffffff; text-decoration:none; font:600 .92rem/1 'Switzer', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; letter-spacing:.2px;
+  background:rgba(255,255,255,.16); color:#ffffff; text-decoration:none; font:600 .92rem/1 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; letter-spacing:.2px;
   -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: transform .15s ease, background .2s ease, opacity .2s ease;
 }
 .dc-cta:hover{ background:rgba(255,255,255,.20); transform:translateY(-1px); }
 
-/* --- NEW: disable card-link taps on touch so they do nothing --- */
-@media (hover: none) and (pointer: coarse){
-  .dc .dc-card a { pointer-events: none; }
-}
+@media (hover: none) and (pointer: coarse){ .dc .dc-card a { pointer-events: none; } }
 
 .dc-modal-body img {
   opacity: 1 !important;
@@ -260,9 +214,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   visibility: visible !important;
 }
 
-
 .dc-apple {
-  font-family: "Switzer", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
@@ -274,14 +227,12 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
    WRAP (viewport → content)
    =============================== */
 
-/* DC MODALS Desktop  */
 .dc-apple .wrap{
   max-width: 920px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* DC MODALS Mobile  */
 @media (max-width: 768px){
   .dc-apple .wrap{
     padding-left: 1vw !important;
@@ -296,17 +247,17 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 .dc-apple h1{
   color:#fff;
   font-weight:600;
-  font-size:clamp(2.4rem, 4.2vw, 3.6rem);
-  line-height:1.02;
+  font-size:37px;
+  line-height:1.1;
   letter-spacing:-0.035em;
   margin:0 0 14px 0;
 }
 
 .dc-apple .subhead{
-  color:#BAB8B8;
-  font-weight:400;
-  font-size:clamp(1.05rem, 1.3vw, 1.15rem);
-  line-height:1.35;
+  color:#8F8F8F;
+  font-weight:500;
+  font-size:21px;
+  line-height:1.3;
   letter-spacing:-0.01em;
   margin:0 0 4rem 0;
 }
@@ -329,16 +280,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin:0 0 24px 0;
 }
 
-/* Override GLOBAL modal heading spacing ONLY inside dc-apple */
 .dc-modal-body .dc-apple h2{
-  transform: none !important;          /* kills the upward shift */
-  margin: 0 0 14px 0 !important;        /* tight bottom spacing */
+  transform: none !important;
+  margin: 0 0 14px 0 !important;
 }
 
 .dc-modal-body .dc-apple p.support{
-  margin: 0 0 30px 0 !important;       /* keep your desired spacing */
+  margin: 0 0 30px 0 !important;
 }
-
 
 /* ===============================
    LOGOS
@@ -360,15 +309,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 /* ===============================
-   DEFAULT GRAY CARDS (kept normal)
+   DEFAULT GRAY CARDS
    =============================== */
 
-/* This stays “standard” so it doesn’t affect other cards */
 .dc-apple .dc-modal-textbox{
   background:#191919;
   border-radius:10px;
-  padding:14px 14px;      /* inside */
-  margin:0 0 32px 0;      /* between cards */
+  padding:14px 14px;
+  margin:0 0 32px 0;
 }
 
 @media (max-width: 768px){
@@ -380,54 +328,27 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 .dc-apple .dc-modal-textbox p:last-child{ margin-bottom:0; }
-/* ===============================
-   STEP CARDS ONLY (1–5)
-   Same glossy black effect as package-checklist
-   NO colorful borders
-   Use: class="dc-modal-textbox step-card"
-   =============================== */
 
 .dc-apple .dc-modal-textbox.step-card{
   position: relative;
-
-  /* Glossy black Apple-style gradient (same as package) */
   background-image:
-    linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.06),
-      rgba(255,255,255,0.00)
-    ),
-    linear-gradient(
-      135deg,
-      #0b0b0d 0%,
-      #141416 50%,
-      #1c1c1f 100%
-    );
-
+    linear-gradient(to bottom, rgba(255,255,255,0.06), rgba(255,255,255,0.00)),
+    linear-gradient(135deg, #0b0b0d 0%, #141416 50%, #1c1c1f 100%);
   border-radius: 16px;
   padding: 26px 26px 24px;
   margin: 0 0 32px 0;
-
-  /* subtle neutral border only */
   border: 1px solid rgba(255,255,255,0.10);
   background-clip: padding-box;
-
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.08),
     0 18px 40px rgba(0,0,0,0.45);
 }
 
-/* Ensure text contrast is correct */
-.dc-apple .dc-modal-textbox.step-card .item-title{
-  color: #ffffff;
-}
-
-.dc-apple .dc-modal-textbox.step-card .item-body{
-  color: #BAB8B8;
-}
+.dc-apple .dc-modal-textbox.step-card .item-title{ color: #ffffff; }
+.dc-apple .dc-modal-textbox.step-card .item-body{ color: #BAB8B8; }
 
 /* ===============================
-   ITEM TITLE ROW
+   ITEM TITLE / BODY
    =============================== */
 
 .dc-apple .item-title{
@@ -435,15 +356,14 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   align-items:center;
   gap:16px;
   color:#fff;
-  font-weight:500;
-  font-size:1.2rem;
-  line-height:1.2;
+  font-weight:600;
+  font-size:21px;
+  line-height:1.1;
   letter-spacing:-0.01em;
   text-transform: capitalize;
   margin:0 0 12px 0;
 }
 
-/* Number badge — colorful gradient border, rounded square */
 .dc-apple .item-number{
   position:relative;
   width:44px;
@@ -451,8 +371,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  border-radius:20px;            /* rounded square */
-  background: rgba(0,0,0,0.90);  /* inner fill */
+  border-radius:20px;
+  background: rgba(0,0,0,0.90);
   color:#ffffff;
   font-size:1.2rem;
   font-weight:600;
@@ -466,29 +386,20 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   inset:0;
   padding:1.5px;
   border-radius:inherit;
-
-  background: linear-gradient(
-    135deg,
-    #6ee7f9,
-    #a78bfa,
-    #fbc2eb
-  );
-
+  background: linear-gradient(135deg, #6ee7f9, #a78bfa, #fbc2eb);
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite:xor;
   mask-composite:exclude;
-
   pointer-events:none;
 }
 
-/* Item body */
 .dc-apple .item-body{
   color:#807E7E;
-  font-weight:400;
-  font-size:0.9rem;
-  line-height:1.4;
+  font-weight:500;
+  font-size:17px;
+  line-height:1.35;
   letter-spacing:-0.005em;
   margin:0;
   width:100%;
@@ -496,7 +407,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 /* ===============================
-   PACKAGE CHECKLIST (hover-only aurora border)
+   PACKAGE CHECKLIST
+   fixed aurora + fixed subtitle mapping
    =============================== */
 
 .dc-apple .package-checklist{
@@ -514,13 +426,11 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   backdrop-filter: blur(26px) saturate(170%);
   -webkit-backdrop-filter: blur(26px) saturate(170%);
 
-  border-radius:16px;
-  padding:26px 26px 24px;
-  margin:20px 0 40px;
-  padding-top:40px;
-  padding-bottom:40px;
+  border-radius:15px;
+  padding:36px 24px 30px;
+  margin:20px 0 32px;
 
-  border:1px solid rgba(255,255,255,0.10);
+  border:1px solid #212121;
   background-clip:padding-box;
 
   box-shadow:
@@ -528,6 +438,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
     inset 0 -1px 0 rgba(0,0,0,0.65),
     0 22px 55px rgba(0,0,0,0.55);
 
+  overflow:hidden;
   transition: border-color .35s ease, box-shadow .35s ease;
 }
 
@@ -549,8 +460,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 
   opacity:0;
   transition: opacity .35s ease;
@@ -569,12 +480,11 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
     radial-gradient(600px 320px at 92% 80%, rgba(251,194,235,0.09), rgba(0,0,0,0) 58%),
     linear-gradient(120deg, rgba(255,255,255,0.11), rgba(255,255,255,0.05), rgba(255,255,255,0.00));
 
-  mix-blend-mode:screen;
   opacity:0;
+  mix-blend-mode:screen;
   transition: opacity .35s ease;
 }
 
-/* hover/focus = show colorful border + glow */
 .dc-apple .package-checklist:hover::before,
 .dc-apple .package-checklist:hover::after,
 .dc-apple .package-checklist:focus-within::before,
@@ -592,249 +502,111 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
     0 0 0 1px rgba(167,139,250,0.25);
 }
 
-
-.dc-apple .package-checklist{
-  padding-top: 40px;     /* space INSIDE top */
-  padding-bottom: 40px;  /* space INSIDE bottom */
+/* PACKAGE badge */
+.dc-apple .package-checklist .package-category{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 24px;
+  border: 1px solid #2b2b2b;
+  border-radius: 10px;
+  background: transparent !important;
+  color: #d8d8d8 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none !important;
+  margin: 0 0 18px !important;
+  box-shadow: none !important;
 }
 
+/* package title */
+.dc-apple .package-checklist .package-title,
+.dc-apple .package-checklist .package-title.is-text-outline{
+  color:#ffffff;
+  background:none;
+  -webkit-text-stroke:0;
+  -webkit-text-fill-color:#ffffff;
+  text-shadow: 0 0 12px rgba(195,220,255,0.12);
+  font-weight:600;
+  font-size:30px;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  margin:0;
+}
+
+/* subtitle under title */
+.dc-apple .package-checklist .package-title::after{
+  display:block;
+  margin-top:40px;
+  margin-bottom:10px;
+  font-size:21px;
+  font-weight:500;
+  line-height:1.2;
+  color:#ffffff;
+  content:"";
+}
+
+/* robust subtitle mapping */
+.dc-apple .package-checklist:nth-of-type(1) .package-title::after{ content:"Research & Strategy"; }
+.dc-apple .package-checklist:nth-of-type(2) .package-title::after{ content:"Strategy & Execution"; }
+.dc-apple .package-checklist:nth-of-type(3) .package-title::after{ content:"Executive Leadership"; }
+.dc-apple .package-checklist:nth-of-type(4) .package-title::after{ content:"Research & Strategy"; }
+.dc-apple .package-checklist:nth-of-type(5) .package-title::after{ content:"Strategy & Execution"; }
+.dc-apple .package-checklist:nth-of-type(6) .package-title::after{ content:"Executive Leadership"; }
+
+/* description */
+.dc-apple .package-checklist .item-body{
+  color:#8b8b8f;
+  font-size:17px;
+  font-weight:500;
+  line-height:1.35;
+  margin:0 0 14px;
+}
+
+/* list area */
 .dc-apple .package-checklist ul{
   list-style:none;
-  padding:0;
   margin:0;
+  padding:30px 0 0;
+  border-top:1px solid #212121;
 }
 
 .dc-apple .package-checklist li{
   display:flex;
-  align-items:center;
-  gap:14px;
-  color:#fff;
-  font-size:0.95rem;
-  line-height:1.45;
-  margin-bottom:12px;
+  align-items:flex-start;
+  gap:12px;
+  color:#f2f2f2;
+  font-size:17px;
+  font-weight:500;
+  line-height:1.35;
+  margin-bottom:10px;
 }
-
 .dc-apple .package-checklist li:last-child{ margin-bottom:0; }
 
 .dc-apple .package-checklist .check{
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  position:relative;
-
-  background:
-    radial-gradient(18px 12px at 30% 30%, rgba(110,231,249,0.28), transparent 70%),
-    radial-gradient(16px 10px at 70% 20%, rgba(167,139,250,0.25), transparent 72%),
-    radial-gradient(18px 12px at 60% 80%, rgba(251,194,235,0.22), transparent 74%),
-    linear-gradient(135deg, #ffffff, #f5f6f8);
-
-  backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-
-  border:0.5px solid rgba(255,255,255,0.7);
-
-  color:#000;
-  font-size:0.8rem;
-  font-weight:700;
-  flex-shrink:0;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.9),
-    0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* ✅ 2× MORE COLORFUL checkmark style */
-.dc-apple .dc-modal-textbox.dc-modal-plain .check{
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  position:relative;
-
-  background:
-    radial-gradient(18px 12px at 30% 30%, rgba(110,231,249,0.55), transparent 70%),
-    radial-gradient(16px 10px at 70% 20%, rgba(167,139,250,0.50), transparent 72%),
-    radial-gradient(18px 12px at 60% 80%, rgba(251,194,235,0.45), transparent 74%),
-    linear-gradient(135deg, #ffffff, #f5f6f8);
-
-  backdrop-filter: blur(12px) saturate(200%);
-  -webkit-backdrop-filter: blur(12px) saturate(200%);
-
-  border:0.5px solid rgba(255,255,255,0.8);
-
-  color:#000;
-  font-size:0.8rem;
-  font-weight:700;
-  flex-shrink:0;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    0 6px 14px rgba(0,0,0,0.18);
-}
-
-
-
-
-/* Gradient title inside package */
-.dc-apple .package-checklist .package-title{
+  width:auto;
+  height:auto;
+  min-width:22px;
+  display:inline-block;
+  background:none;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  color:#ffffff;
+  font-size:1.05rem;
   font-weight:600;
-  font-size: clamp(1.55rem, 2.2vw, 2.05rem);
-  line-height:1.16;
-  letter-spacing:-0.02em;
-  margin:0 0 18px 0;
-
-  background: linear-gradient(135deg, #6ee7f9, #a78bfa, #fbc2eb);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
+  line-height:1;
+  flex-shrink:0;
+  transform: translateY(2px);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
 }
-
-.dc-apple .package-title.is-text-outline{
-  font-weight: 400;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
-
-  /* white fill */
-  color: #ffffff;
-
-  /* gradient stroke */
-  background: linear-gradient(
-    135deg,
-    #6ee7f9,
-    #a78bfa,
-    #fbc2eb
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* outline only */
-  -webkit-text-stroke: 1px transparent;
-
-  /* optional subtle glow */
-  text-shadow:
-    0 0 6px rgba(167,139,250,0.25);
-}
-
-/* Keep the same sizing as the gradient title, but make it white fill + gradient stroke */
-.dc-apple .package-checklist .package-title.is-text-outline{
-  font-weight: 450;
-  font-size: clamp(1.55rem, 2.2vw, 2.05rem);
-  line-height: 1.16;
-  letter-spacing: -0.02em;
-  margin: 0 0 18px 0;
-
-  /* white fill */
-  color: #ffffff;
-
-  /* gradient for the stroke */
-  background: linear-gradient(135deg, #6ee7f9, #a78bfa, #fbc2eb);
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* outline uses the gradient (stroke is “transparent” so gradient shows through) */
-  -webkit-text-stroke: 1px transparent;
-
-  /* IMPORTANT: override the gradient-fill style (prevents transparent fill) */
-  -webkit-text-fill-color: #ffffff; /* helps in WebKit browsers */
-}
-
-
-.dc-apple .package-checklist .is-bold{
-  font-weight: 700;
-  font-style: normal;
-}
-
-.dc-apple .package-checklist .item-body{
-  margin-bottom: 14px;
-}
-
-.dc-apple .package-checklist .package-category{
-  color:#000 !important;
-  font-size:0.7rem !important;
-  font-weight:900 !important;
-  letter-spacing:0.12em !important;
-  text-transform:uppercase !important;
-  margin-bottom:13px !important;
-  display:block;
-}
-
-.dc-apple .package-checklist .package-category{
-  position: relative;
-  display: inline-block;
-
-  padding: 3px 8px;
-  margin-bottom: 15px;
-  border-radius: 5px; /* ← requested */
-
-  color: #000;
-  font-size: 0.6rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-
-  /* WHITE AURORA GLASS — ~2× MORE COLOR */
-background:
-  /* intense, small color touches (only in 2–3 spots) */
-  radial-gradient(70px 40px at 18% 35%, rgba(110,231,249,0.55), rgba(255,255,255,0) 70%),
-  radial-gradient(65px 38px at 82% 30%, rgba(167,139,250,0.50), rgba(255,255,255,0) 72%),
-  radial-gradient(75px 42px at 68% 88%, rgba(251,194,235,0.45), rgba(255,255,255,0) 74%),
-
-  /* clean pure white base */
-  linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1));
-  /* clean white glass base */
-  linear-gradient(
-    135deg,
-    rgba(255,255,255,1),
-    rgba(245,246,248,0.96)
-  );
-  
-  backdrop-filter: blur(18px) saturate(220%);
-  -webkit-backdrop-filter: blur(18px) saturate(220%);
-
-  border: 0.5px solid rgba(255,255,255,0.8);
-  background-clip: padding-box;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    0 6px 16px rgba(0,0,0,0.18);
-}
-
 
 /* =====================================
-   PLAIN BLACK PACKAGE (KEEP BORDER)
+   QUIZ
    ===================================== */
-
-.dc-apple .package-checklist.package-plain{
-  background: #0f0f11; /* plain black interior */
-}
-
-/* REMOVE ONLY the aurora GLOW layer */
-.dc-apple .package-checklist.package-plain::after{
-  display: none;
-}
-
-/* KEEP the colorful gradient border (::before stays untouched) */
-
-
-/* Plain title (no gradient, no outline) */
-.dc-apple .package-checklist.package-plain .package-title{
-  color: #ffffff;
-  background: none;
-  -webkit-text-stroke: 0;
-  text-shadow: none;
-}
-
-
-/* =====================================================
-   QUIZ – APPLE STYLE WITH LARGE BACKGROUND NUMBERS
-   ===================================================== */
 
 .dc-quiz{
   --hairline: rgba(0,0,0,.10);
@@ -843,18 +615,19 @@ background:
   --muted: rgba(0,0,0,.60);
 }
 
-/* Header */
 .dc-quiz-header{
   text-align:center;
   margin: 8px 0 22px;
 }
 .dc-quiz-header .package-category{
   display:inline-block;
-  opacity:.75;
+  opacity:1;
   margin-bottom:10px;
+  font-size:18px;
+  color:#8F8F8F;
+  font-weight:500;
 }
 
-/* Group container */
 .dc-quiz-group{
   border: 1px solid var(--hairline);
   border-radius: 20px;
@@ -862,61 +635,55 @@ background:
   overflow: hidden;
 }
 
-/* Rows */
 .dc-quiz-row{
   position: relative;
-  padding: 10px 20px 45px 20px; /* unchanged */
+  padding: 10px 20px 45px 20px;
   border-top: 1px solid var(--hairline-soft);
   z-index: 0;
 }
-.dc-quiz-row:first-child{
-  border-top: 0;
-}
+.dc-quiz-row:first-child{ border-top: 0; }
 
-/* Number pinned to TOP RIGHT */
 .dc-quiz-row::before{
   content: "";
   position: absolute;
   top: 15px;
   right: 15px;
-
   font-size: 25px;
   font-weight: 600;
   line-height: 1;
-
   color: rgba(255,255,255,1);
   pointer-events: none;
 }
 
-/* Assign numbers */
 .dc-quiz-row:nth-child(1)::before{ content: "1"; }
 .dc-quiz-row:nth-child(2)::before{ content: "2"; }
 .dc-quiz-row:nth-child(3)::before{ content: "3"; }
 .dc-quiz-row:nth-child(4)::before{ content: "4"; }
 .dc-quiz-row:nth-child(5)::before{ content: "5"; }
 
-/* Eyebrow */
 .dc-quiz-eyebrow{
   color: var(--muted);
   margin-bottom: 10px;
 }
 
-/* Typography */
 .dc-quiz-group .item-title{
-  color: var(--text);
+  color:#fff;
   margin: 0 0 16px;
-  line-height: 1.22;
+  font-size:21px;
+  font-weight:600;
+  line-height:1.1;
   text-transform: none !important;
 }
 .dc-quiz-group .item-body{
-  color: rgba(0,0,0,.70);
+  color:#807E7E;
+  font-size:17px;
+  font-weight:500;
+  line-height:1.35;
 }
-.dc-quiz-group .item-body + .item-body{
-  margin-top: 16px;
-}
+.dc-quiz-group .item-body + .item-body{ margin-top: 8px; }
 
 /* =====================================
-   DARK (PLAIN BLACK) VARIANT
+   DARK VARIANT
    ===================================== */
 
 .dc-apple .dc-quiz-group{
@@ -930,45 +697,35 @@ background:
 .dc-apple .dc-quiz-row{
   border-top:1px solid rgba(255,255,255,0.06);
   margin-bottom: 30px;
-
 }
 
-.dc-apple .dc-quiz-header h2{
-  color:#ffffff;
-}
-.dc-apple .dc-quiz-header .subhead{
-  color:rgba(255,255,255,0.7);
-}
+.dc-apple .dc-quiz-header h2{ color:#ffffff; }
+.dc-apple .dc-quiz-header .subhead{ color:#8F8F8F; }
 .dc-apple .dc-quiz-header .package-category{
-  color:rgba(255,255,255,0.5);
+  color:#8F8F8F;
+  font-size:18px;
+  font-weight:500;
 }
-.dc-apple .dc-quiz-eyebrow{
-  color:rgba(255,255,255,0.5);
-}
+.dc-apple .dc-quiz-eyebrow{ color:rgba(255,255,255,0.5); }
 
 .dc-apple .dc-quiz-group .item-title{
   color:#ffffff;
+  font-size:21px;
+  font-weight:600;
+  line-height:1.1;
 }
 .dc-apple .dc-quiz-group .item-body{
-  color:rgba(255,255,255,0.72);
+  color:#807E7E;
+  font-size:17px;
+  font-weight:500;
+  line-height:1.35;
 }
 
-/* Dark mode number */
-.dc-apple .dc-quiz-row::before{
-  color: rgba(255,255,255,0.10);
-}
-
-.dc-quiz-eyebrow{
-  padding-top: 30px;   /* adjust number as needed */
-}
-
-
-
-
+.dc-apple .dc-quiz-row::before{ color: rgba(255,255,255,0.10); }
+.dc-quiz-eyebrow{ padding-top: 30px; }
 
 /* =====================================
-   Workflow ring diagram — 5 steps
-   Uses: dot style like .wf-dot + STEP style like .wf-label::before
+   Workflow ring diagram
    ===================================== */
 
 .dc-apple .dc-workflow-ring{
@@ -982,14 +739,12 @@ background:
   display: block;
 }
 
-/* Ring */
 .dc-apple .dc-workflow-ring .ring-track{
   fill: none;
   stroke: rgba(255,255,255,0.12);
   stroke-width: 2;
 }
 
-/* Dots (same feel as your .wf-dot: white + dark stroke, sits on the line) */
 .dc-apple .dc-workflow-ring .node circle{
   fill: #ffffff;
   stroke: rgba(15,15,17,1);
@@ -1003,7 +758,6 @@ background:
   fill: #000;
 }
 
-/* STEP background text (same as your .wf-label::before) */
 .dc-apple .dc-workflow-ring .label-step{
   font-size: 42px;
   font-weight: 600;
@@ -1011,14 +765,12 @@ background:
   fill: rgba(255,255,255,0.20);
 }
 
-/* Title */
 .dc-apple .dc-workflow-ring .label-title{
   font-size: 19px;
   font-weight: 500;
   fill: rgba(255,255,255,0.88);
 }
 
-/* Center */
 .dc-apple .dc-workflow-ring .center-title{
   font-size: 28px;
   font-weight: 700;
@@ -1031,29 +783,19 @@ background:
   fill: rgba(255,255,255,0.60);
 }
 
-/* Mobile: same layout, just scale text + nodes slightly */
 @media (max-width: 520px){
   .dc-apple .dc-workflow-ring{ margin: 16px auto 18px; }
-
   .dc-apple .dc-workflow-ring .label-step{ font-size: 45px; }
   .dc-apple .dc-workflow-ring .label-title{ font-size: 24px; }
   .dc-apple .dc-workflow-ring .node-num{ font-size: 16px; }
-    /* 👇 THIS controls "Workflow" */
-  .dc-apple .dc-workflow-ring .center-title{
-    font-size: 34px;   /* increase or decrease */
-  }
-
-  /* 👇 THIS controls "5-step process" */
-  .dc-apple .dc-workflow-ring .center-sub{
-    font-size: 25px;   /* increase or decrease */
-  }
+  .dc-apple .dc-workflow-ring .center-title{ font-size: 34px; }
+  .dc-apple .dc-workflow-ring .center-sub{ font-size: 25px; }
 }
 
 /* ===========================
-   STOP ANY TEXT TRUNCATION
+   STOP TEXT TRUNCATION
    =========================== */
 
-/* 1) Kill single-line truncation + ellipsis */
 .dc-apple .dc-modal-textbox .item-title,
 .dc-apple .dc-modal-textbox .item-title strong,
 .dc-apple .dc-modal-textbox .item-body{
@@ -1064,7 +806,6 @@ background:
   word-break: break-word !important;
 }
 
-/* 2) Kill multi-line clamp (line-clamp / -webkit-box clamp) */
 .dc-apple .dc-modal-textbox .item-title,
 .dc-apple .dc-modal-textbox .item-title strong,
 .dc-apple .dc-modal-textbox .item-body{
@@ -1074,7 +815,6 @@ background:
   -webkit-box-orient: unset !important;
 }
 
-/* 3) If any parent is clipping, neutralize it */
 .dc-apple .dc-modal-textbox,
 .dc-apple .dc-modal-plain,
 .dc-apple .dc-quiz,
@@ -1085,7 +825,6 @@ background:
   height: auto !important;
 }
 
-/* 4) If you’re inside flex/grid somewhere, this prevents “no wrap” behavior */
 .dc-apple .dc-modal-textbox,
 .dc-apple .dc-modal-plain,
 .dc-apple .dc-modal-textbox .item-title,
@@ -1093,9 +832,7 @@ background:
   min-width: 0 !important;
 }
 
-.dc-apple .dc-workflow-ring{
-  width: 130%;
-}
+.dc-apple .dc-workflow-ring{ width: 130%; }
 
 @media (max-width: 520px){
   .dc-apple .dc-workflow-ring{
@@ -1105,12 +842,10 @@ background:
 }
 
 /* =========================================
-   Make STEP 1–5 match the SVG style
+   STEP styles
    ========================================= */
 
-/* Base STEP styling */
-.dc-apple .dc-modal-textbox.dc-modal-plain 
-.package-category.dc-quiz-eyebrow{
+.dc-apple .dc-modal-textbox.dc-modal-plain .package-category.dc-quiz-eyebrow{
   font-size: 42px;
   font-weight: 600;
   line-height: 1;
@@ -1119,17 +854,10 @@ background:
   margin: 0 0 12px;
 }
 
-/* Optional: adjust title to match SVG weight */
-.dc-apple .dc-modal-textbox.dc-modal-plain 
-.item-title{
+.dc-apple .dc-modal-textbox.dc-modal-plain .item-title{
   font-size: 19px;
   font-weight: 500;
 }
-
-
-/* =========================================
-   STEP-style heading for quiz sections
-   ========================================= */
 
 .dc-apple .dc-step-big{
   font-size: 42px;
@@ -1141,16 +869,12 @@ background:
   margin: 30px 0 12px;
 }
 
-/* Mobile */
 @media (max-width: 520px){
   .dc-apple .dc-step-big{
     font-size: 42px;
     margin-top: 40px;
-
   }
 }
-
-
 
 .title-inline{
   display:inline-flex;
@@ -1164,14 +888,13 @@ background:
   text-align: left;
 }
 
-
 .dc-apple .mini-package-category{
-  margin-top: 0px;      /* space above */
-    margin-bottom: -10px;   !important;
-  font-size: 0.75rem;    /* optional size tweak */
-    letter-spacing: 0.18em;
-  font-weight: 700;      /* 👈 add this */
-  opacity: 0.3;          /* optional */
+  margin-top: 0px;
+  margin-bottom: -10px !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  opacity: 0.3;
 }
 
 /* CTA wrapper */
@@ -1182,82 +905,59 @@ background:
 
 .dc-apple .cta-text{
   margin-bottom: 16px;
+  font-size:21px;
+  line-height:1.3;
+  color:#ffffff;
+  font-weight:500;
 }
-
 
 .dc-apple .dc-primary-btn{
   display: inline-block;
-
   background-color: #ffffff;
   color: #000000;
   border: 2px solid #ffffff;
-
-  border-radius: 10px;   /* ← changed */
-
+  border-radius: 90px;
   text-decoration: none;
-
   padding: 1rem 9.2rem;
-  font-size: 15px;
-  line-height: 1;
+  font-size: 18px;
+  line-height: 1.3;
   font-weight: 500;
-
   box-shadow: none;
 }
 
-/* Keep the CTA text on ONE line */
-.dc-apple .dc-primary-btn{
-  white-space: nowrap;     /* prevents "Book a discovery call" wrapping */
-}
+.dc-apple .dc-primary-btn{ white-space: nowrap; }
 
-/* Mobile: don’t use huge fixed side padding */
 @media (max-width: 520px){
   .dc-apple .dc-primary-btn{
-    padding: 0.9rem 1.4rem;  /* smaller, responsive */
+    padding: 0.9rem 1.4rem;
     max-width: 100%;
   }
 }
 
-
-/* only INNER dc-modal-plain cards (nested) */
 .dc-apple .dc-modal-plain .dc-modal-plain{
-  margin: 14px 0; /* change this value */
+  margin: 14px 0;
 }
 
-
-
-
 /* ================================
-   DC MODAL PLAIN (BASE) Keep this as your default
+   DC MODAL PLAIN (BASE)
    ================================ */
 
 .dc-apple .dc-modal-plain{
   position: relative;
-
   background: #0f0f11;
-
-  /* keep original subtle gray border */
   border: 1px solid rgba(255,255,255,0.08);
-
   border-radius: 16px;
-
-  padding: 30px 17px;
+  padding: 15px 17px 30px;
   margin: 30px 0;
-
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.05),
     0 18px 40px rgba(0,0,0,0.6);
 }
 
 /* =========================================================
-   AURORA BORDER OPTIONS (A/B/C/D)
-   Use ONE class at a time on the modal:
-   class="dc-modal-textbox dc-modal-plain aurora-a"
-   class="dc-modal-textbox dc-modal-plain aurora-b"
-   class="dc-modal-textbox dc-modal-plain aurora-c"
-   class="dc-modal-textbox dc-modal-plain aurora-d"
+   AURORA BORDER OPTIONS
    ========================================================= */
 
-/* Shared border-ring mechanics (no interior fill) */
 .dc-apple .dc-modal-plain.aurora-a::before,
 .dc-apple .dc-modal-plain.aurora-b::before,
 .dc-apple .dc-modal-plain.aurora-c::before,
@@ -1265,96 +965,45 @@ background:
   content:"";
   position:absolute;
   inset:0;
-  padding:1px; /* aurora border thickness */
+  padding:1px;
   border-radius:inherit;
   pointer-events:none;
-
-  /* border ring only — no interior fill */
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-
   mix-blend-mode: screen;
 }
 
-
-/* ================================
-   OPTION A (YOUR CURRENT COMBO)
-   ================================ */
-
 .dc-apple .dc-modal-plain.aurora-a::before{
   background:
-    /* soft white wash */
     radial-gradient(260px 160px at 50% -10%, rgba(255,255,255,0.18), transparent 75%),
-
-    /* cyan */
     radial-gradient(240px 115px at 15% 10%, rgba(110,231,249,0.42), transparent 80%),
-
-    /* violet */
     radial-gradient(250px 130px at 70% 2%, rgba(167,139,250,0.64), transparent 72%),
-
-    /* pink */
     radial-gradient(180px 200px at 80% 95%, rgba(251,194,235,0.80), transparent 85%);
 }
 
-
-/* ================================
-   OPTION B (MORE “TOP-RIGHT LIGHT”)
-   ================================ */
-
 .dc-apple .dc-modal-plain.aurora-b::before{
   background:
-    /* bright white top highlight */
     radial-gradient(300px 180px at 65% -15%, rgba(255,255,255,0.22), transparent 75%),
-
-    /* cyan edge shimmer */
     radial-gradient(210px 120px at 8% 18%, rgba(110,231,249,0.38), transparent 78%),
-
-    /* violet hit (top-right) */
     radial-gradient(280px 150px at 92% 10%, rgba(167,139,250,0.72), transparent 74%),
-
-    /* smaller pink accent (bottom-right) */
     radial-gradient(180px 150px at 88% 92%, rgba(251,194,235,0.68), transparent 82%);
 }
 
-
-/* ================================
-   OPTION C (MORE “BOTTOM GLOW”)
-   ================================ */
-
 .dc-apple .dc-modal-plain.aurora-c::before{
   background:
-    /* soft white wash */
     radial-gradient(280px 170px at 55% -12%, rgba(255,255,255,0.16), transparent 76%),
-
-    /* cyan (top-left) smaller + tighter */
     radial-gradient(190px 110px at 12% 12%, rgba(110,231,249,0.36), transparent 78%),
-
-    /* violet (top) stretched across */
     radial-gradient(320px 140px at 75% 0%, rgba(167,139,250,0.62), transparent 76%),
-
-    /* big pink glow (bottom-center) */
     radial-gradient(320px 220px at 55% 105%, rgba(251,194,235,0.78), transparent 82%);
 }
 
-
-/* ================================
-   OPTION D (MORE “LEFT-SIDE AURORA”)
-   ================================ */
-
 .dc-apple .dc-modal-plain.aurora-d::before{
   background:
-    /* white top wash */
     radial-gradient(280px 160px at 45% -12%, rgba(255,255,255,0.19), transparent 76%),
-
-    /* cyan (left) stronger */
     radial-gradient(320px 180px at -10% 55%, rgba(110,231,249,0.52), transparent 78%),
-
-    /* violet (right) softer */
     radial-gradient(240px 140px at 95% 25%, rgba(167,139,250,0.52), transparent 76%),
-
-    /* pink (bottom-right) medium */
     radial-gradient(220px 180px at 85% 98%, rgba(251,194,235,0.66), transparent 84%);
 }
