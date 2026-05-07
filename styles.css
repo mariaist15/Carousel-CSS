@@ -199,12 +199,80 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 /* CTA */
-.dc-cta{
-  display:inline-flex; align-items:center; justify-content:center; padding:8px 12px; border-radius:9999px; border:0; cursor:pointer;
-  background:rgba(255,255,255,.16); color:#ffffff; text-decoration:none; font:600 .92rem/1 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; letter-spacing:.2px;
-  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: transform .15s ease, background .2s ease, opacity .2s ease;
+.dc-apple .cta-wrapper{
+  margin-top: 40px;
+  text-align: center;
 }
-.dc-cta:hover{ background:rgba(255,255,255,.20); transform:translateY(-1px); }
+
+.dc-apple .cta-text{
+  margin: 0 0 16px 0;
+  font-size: 21px;
+  line-height: 1.3;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.dc-apple .dc-primary-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  min-width: 260px;
+  padding: 0 34px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.85);
+  color: #000000;
+  text-decoration: none;
+  font: 500 18px/1.1 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  letter-spacing: 0;
+  white-space: nowrap;
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dc-apple .dc-primary-btn:hover,
+.dc-apple .dc-primary-btn:focus-visible{
+  background: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  border-color: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.dc-apple .dc-primary-btn:active{
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@media (max-width: 520px){
+  .dc-apple .cta-wrapper{
+    margin-top: 32px;
+  }
+
+  .dc-apple .cta-text{
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .dc-apple .dc-primary-btn{
+    width: 100%;
+    max-width: 430px;
+    min-width: 0;
+    min-height: 54px;
+    padding: 0 24px;
+    font-size: 16px;
+  }
+}
 
 @media (hover: none) and (pointer: coarse){ .dc .dc-card a { pointer-events: none; } }
 
@@ -839,47 +907,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   letter-spacing: 0.18em;
   font-weight: 700;
   opacity: 0.3;
-}
-
-/* CTA wrapper */
-.dc-apple .cta-wrapper{
-  margin-top: 40px;
-  text-align: center;
-}
-
-.dc-apple .cta-text{
-  margin-bottom: 16px;
-  font-size:21px;
-  line-height:1.3;
-  color:#ffffff;
-  font-weight:500;
-}
-
-.dc-apple .dc-primary-btn{
-  display: inline-block;
-  background-color: #ffffff;
-  color: #000000;
-  border: 2px solid #ffffff;
-  border-radius: 90px;
-  text-decoration: none;
-  padding: 1rem 9.2rem;
-  font-size: 18px;
-  line-height: 1.3;
-  font-weight: 500;
-  box-shadow: none;
-}
-
-.dc-apple .dc-primary-btn{ white-space: nowrap; }
-
-@media (max-width: 520px){
-  .dc-apple .dc-primary-btn{
-    padding: 0.9rem 1.4rem;
-    max-width: 100%;
-  }
-}
-
-.dc-apple .dc-modal-plain .dc-modal-plain{
-  margin: 14px 0;
 }
 
 /* ================================
