@@ -221,20 +221,18 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  min-width: 260px;
+  width: 355px;
+  height: 40px;
   padding: 0 34px;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 1);
-  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #FFFFFF;
+  background: rgba(218, 218, 218, 0.95);
   color: #000000;
   text-decoration: none;
   font: 500 18px/1.1 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   letter-spacing: 0;
   white-space: nowrap;
   box-shadow: none;
-  -webkit-backdrop-filter: blur(0px);
-  backdrop-filter: blur(0px);
   transition:
     transform 180ms ease,
     background-color 180ms ease,
@@ -247,9 +245,9 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
 .dc-primary-btn:hover,
 .dc-primary-btn:focus-visible{
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.10);
   color: #000000;
-  border-color: rgba(255, 255, 255, 1);
+  border-color: #FFFFFF;
   transform: translateY(-1px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
   outline: none;
@@ -272,13 +270,13 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 
   .dc-primary-btn{
     width: 100%;
-    max-width: 430px;
-    min-width: 0;
-    min-height: 54px;
+    max-width: 355px;
+    height: 40px;
     padding: 0 24px;
     font-size: 16px;
   }
 }
+
 
 @media (hover: none) and (pointer: coarse){ .dc .dc-card a { pointer-events: none; } }
 
