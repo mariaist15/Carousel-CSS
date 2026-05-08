@@ -199,7 +199,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
 }
 
 /* CTA */
-.cta-wrapper{
+.dc-apple .cta-wrapper{
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -208,7 +208,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   text-align: center;
 }
 
-.cta-text{
+.dc-apple .cta-wrapper .cta-text{
   margin: 0 0 16px 0;
   font-size: 21px;
   line-height: 1.3;
@@ -217,7 +217,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   text-align: center;
 }
 
-.dc-primary-btn{
+.dc-apple .cta-wrapper .dc-primary-btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -243,8 +243,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin: 0 auto;
 }
 
-.dc-primary-btn:hover,
-.dc-primary-btn:focus-visible{
+.dc-apple .cta-wrapper .dc-primary-btn:hover,
+.dc-apple .cta-wrapper .dc-primary-btn:focus-visible{
   background: rgba(255, 255, 255, 0.10);
   color: #ffffff;
   border-color: #FFFFFF;
@@ -253,22 +253,22 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   outline: none;
 }
 
-.dc-primary-btn:active{
+.dc-apple .cta-wrapper .dc-primary-btn:active{
   transform: translateY(0);
   box-shadow: none;
 }
 
 @media (max-width: 520px){
-  .cta-wrapper{
+  .dc-apple .cta-wrapper{
     margin-top: 32px;
   }
 
-  .cta-text{
+  .dc-apple .cta-wrapper .cta-text{
     font-size: 18px;
     margin-bottom: 14px;
   }
 
-  .dc-primary-btn{
+  .dc-apple .cta-wrapper .dc-primary-btn{
     width: 100%;
     max-width: 355px;
     height: 40px;
@@ -276,6 +276,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
     font-size: 14px;
   }
 }
+
 
 
 @media (hover: none) and (pointer: coarse){ .dc .dc-card a { pointer-events: none; } }
