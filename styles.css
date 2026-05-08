@@ -229,7 +229,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   background: rgba(218, 218, 218, 0.95);
   color: #000000;
   text-decoration: none;
-  font: 500 18px/1.1 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font: 500 14px/1.1 "Inter Display", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   letter-spacing: 0;
   white-space: nowrap;
   box-shadow: none;
@@ -253,7 +253,6 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   outline: none;
 }
 
-
 .dc-primary-btn:active{
   transform: translateY(0);
   box-shadow: none;
@@ -274,7 +273,7 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
     max-width: 355px;
     height: 40px;
     padding: 0 24px;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
