@@ -339,6 +339,18 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin:0 0 0px 0;
 }
 
+.dc-apple h4{
+  color:#ffffff;
+  font-size:19px;
+  font-weight:500;
+  line-height:1.1;
+  letter-spacing:0;
+  text-align:center;
+  text-transform:none;
+  margin:0 0 12px 0;
+}
+
+
 .dc-apple .support{
   color:#BAB8B8;
   font-weight:400;
