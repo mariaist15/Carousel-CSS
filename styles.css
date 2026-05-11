@@ -562,8 +562,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   margin:0;
 }
 
-/* subtitle under title */
-.dc-apple .package-checklist .package-title::after{
+/* editable subtitle under package title */
+.dc-apple .package-checklist .package-subtitle{
   display:block;
   margin-top:40px;
   margin-bottom:10px;
@@ -571,16 +571,8 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   font-weight:500;
   line-height:1.2;
   color:#ffffff;
-  content:"";
 }
 
-/* robust subtitle mapping */
-.dc-apple .package-checklist:nth-of-type(1) .package-title::after{ content:"Research & Strategy"; }
-.dc-apple .package-checklist:nth-of-type(2) .package-title::after{ content:"Strategy & Execution"; }
-.dc-apple .package-checklist:nth-of-type(3) .package-title::after{ content:"Executive Leadership"; }
-.dc-apple .package-checklist:nth-of-type(4) .package-title::after{ content:"Research & Strategy"; }
-.dc-apple .package-checklist:nth-of-type(5) .package-title::after{ content:"Strategy & Execution"; }
-.dc-apple .package-checklist:nth-of-type(6) .package-title::after{ content:"Executive Leadership"; }
 
 /* description */
 .dc-apple .package-checklist .item-body{
@@ -629,6 +621,11 @@ html.dc-no-scroll, body.dc-no-scroll{ overflow: hidden !important; overscroll-be
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
 }
+
+.dc-apple .package-checklist .check.check-gray{
+  color:#999999;
+}
+
 
 /* =====================================
    QUIZ
